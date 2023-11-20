@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@700&family=Overpass:wght@100;200;300;400;500;600;700;800;900&family=Syne:wght@400;500;600;700;800&display=swap");
+:root {
+  --background-clr: #FFFCF3;
+}
+
+/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  background-color: var(--background-clr);
+  font-family: "Syne", sans-serif;
+}/*# sourceMappingURL=styles.css.map */
