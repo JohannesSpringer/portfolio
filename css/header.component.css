@@ -7,6 +7,10 @@
   display: flex;
   justify-content: space-between;
 }
+.header img {
+  height: 32px;
+  cursor: pointer;
+}
 
 .personal-logo {
   font-family: "Overpass", sans-serif;
@@ -15,6 +19,7 @@
   display: flex;
   align-items: center;
   text-align: center;
+  cursor: default;
 }
 .personal-logo :first-child {
   transform: translateX(4px);
@@ -22,7 +27,7 @@
   text-shadow: 0px 1px, 1px 0px, 1px 0px;
 }
 .personal-logo :last-child {
-  transform: translateY(4px) translateX(-6px);
+  transform: translateY(3px) translateX(-6px);
   margin-right: -4px;
   text-shadow: 0px 1px, 1px 0px, 1px 0px;
 }
@@ -30,5 +35,5 @@
   border-left: 4px solid var(--background-clr);
   height: 32px;
   z-index: 1;
-  transform: rotateZ(10deg) translateY(3px);
+  transform: rotateZ(10deg);
 }/*# sourceMappingURL=header.component.css.map */
