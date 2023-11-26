@@ -1,0 +1,38 @@
+.headline {
+    margin-top: 100px;
+    padding: 12px;
+
+    h1 {
+        font-weight: 800;
+        font-size: 45px;
+        line-height: 45px;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+}
+
+.headline-name {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    hr {
+        width: calc(100% - 205px - 32px);
+        height: 3px;
+        background-color: #000000;
+        border: none;
+        margin: 0;
+    }
+
+
+    span {
+        color: var(--text-clr-green);
+        font-weight: 700;
+        font-size: 23px;
+        line-height: 23px;
+        font-family: 'Overpass', sans-serif;
+        width: 205px;
+        text-align: right;
+    }
+}

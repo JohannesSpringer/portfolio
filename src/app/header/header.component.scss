@@ -6,6 +6,8 @@
     right: 0;
     display: flex;
     justify-content: space-between;
+    z-index: 10;
+    background-color: var(--background-clr);
 
     img {
         height: 32px;
@@ -20,7 +22,7 @@
     display: flex;
     align-items: center;
     text-align: center;
-    cursor: default;
+    cursor: pointer;
 
     :first-child {
         transform: translateX(4px);
