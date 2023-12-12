@@ -1,0 +1,20 @@
+.my-skills {
+  margin: 24px;
+  border: 4px solid black;
+  display: flex;
+  justify-content: center;
+}
+.my-skills h1 {
+  animation-name: change-color-animation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  transform: translateY(-32px);
+  background-color: var(--background-clr);
+  width: fit-content;
+  padding: 8px;
+  margin: 0;
+}
+.my-skills .my-skills-icons {
+  display: flex;
+}/*# sourceMappingURL=my-skills.component.css.map */

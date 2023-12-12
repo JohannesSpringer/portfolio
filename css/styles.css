@@ -9,4 +9,30 @@ body {
   margin: 0;
   background-color: var(--background-clr);
   font-family: "Syne", "sans-serif";
+}
+
+h1 {
+  font-family: "Syne", sans-serif;
+  font-weight: 800;
+  font-size: 45px;
+  line-height: 45px;
+  text-align: center;
+}
+
+@keyframes change-color-animation {
+  0% {
+    color: #000000;
+  }
+  20% {
+    color: #000000;
+  }
+  30% {
+    color: var(--text-clr-green);
+  }
+  70% {
+    color: var(--text-clr-green);
+  }
+  80% {
+    color: #000000;
+  }
 }/*# sourceMappingURL=styles.css.map */
