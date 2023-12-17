@@ -1,7 +1,9 @@
 <div class="my-skills">
-    <div class="my-skills-border"></div>
     <h1>My skills</h1>
     <div class="my-skills-icons">
-        
+        <div class="skill" *ngFor="let skill of skills">
+            <img src="../../assets/img/icons/{{ skill[1] }}.png" alt="">
+            <span>{{ skill[0] }}</span>
+        </div>
     </div>
 </div>
