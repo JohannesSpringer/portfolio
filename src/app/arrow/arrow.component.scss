@@ -1,0 +1,38 @@
+.arrow {
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    height: 290px;
+
+    .arrow-left {
+        display: flex;
+        width: 150px;
+        height: 150px;
+        position: relative;
+
+        img {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .arrowline-left {
+            border-left: 4px solid black;
+            // animation: arrow-left-down-animation 2s ease-in-out;
+            transform: rotateZ(45deg) translateY(-4px) translateX(-2px);
+            transform-origin: bottom left;
+        }
+    }
+}
+
+
+@keyframes arrow-left-down-animation {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1);
+
+    }
+}
