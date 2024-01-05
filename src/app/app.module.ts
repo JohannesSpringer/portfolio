@@ -9,6 +9,7 @@ import { ContactLinkComponent } from './contact-link/contact-link.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { MySkillsComponent } from './my-skills/my-skills.component';
 import { ArrowComponent } from './arrow/arrow.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ArrowComponent } from './arrow/arrow.component';
     ContactLinkComponent,
     AboutMeComponent,
     MySkillsComponent,
-    ArrowComponent
+    ArrowComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,

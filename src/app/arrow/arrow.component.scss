@@ -40,6 +40,10 @@
     }
 }
 
+.mirror-x{
+    transform: scale(-1, 1);
+}
+
 
 @keyframes arrow-left-down-animation {
     0% {

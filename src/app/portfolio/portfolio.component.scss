@@ -1,0 +1,12 @@
+.portfolio {
+    padding: 12px;
+
+    h1 {
+        animation-name: change-color-animation;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        padding: 8px;
+        text-align: left;
+    }
+}
