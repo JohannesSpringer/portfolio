@@ -7,5 +7,9 @@ import { Component, Input } from '@angular/core';
 })
 export class ArrowComponent {
   @Input() inverted: boolean = false;
+  @Input() hovered: boolean = false;
 
+  setClass() {
+    this.hovered = true;
+  }
 }

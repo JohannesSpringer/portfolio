@@ -1,8 +1,6 @@
 <div class="arrow">
-    <div class="arrow-left">
+    <div (mouseenter)="setClass()" [ngClass]="hovered ? 'arrow-left' : 'arrow-left-until-hover'">
         <img src="../../assets/img/arrow-left.png" alt="">
         <div class="arrowline-left"></div>
     </div>
-    
-
 </div>

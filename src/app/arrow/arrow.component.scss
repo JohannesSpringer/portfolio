@@ -4,35 +4,71 @@
     justify-content: center;
     height: 290px;
 
-    .arrow-left {
+    .arrow-left-until-hover {
         display: flex;
         width: 150px;
         height: 150px;
+        transform: translateX(25px);
         position: relative;
+    }
 
-        img {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-        }
+    .arrow-left {
+        width: 250px;
+        height: 250px;
+        transform: translateX(-25px);
+        animation: arrow-left-down-animation 0.25s normal;
 
         .arrowline-left {
-            border-left: 4px solid black;
-            // animation: arrow-left-down-animation 2s ease-in-out;
-            transform: rotateZ(45deg) translateY(-4px) translateX(-2px);
-            transform-origin: bottom left;
+            animation: arrow-left-down-animation-line 0.25s normal;
         }
+    }
+
+    img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    .arrowline-left {
+        border-left: 4px solid black;
+        transform: rotateZ(45deg) translateY(-4px) translateX(-2px);
+        transform-origin: bottom left;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 150px;
     }
 }
 
 
 @keyframes arrow-left-down-animation {
     0% {
-        transform: scale(1);
+        width: 150px;
+        height: 150px;
+        transform: translateX(25px);
+    }
+
+    60% {
+        width: 250px;
+        height: 250px;
+        transform: translateX(-25px);
+    }
+}
+
+@keyframes arrow-left-down-animation-line {
+    0% {
+        height: 150px;
+    }
+
+    60% {
+        height: 290px;
+    }
+
+    70% {
+        height: 290px;
     }
 
     100% {
-        transform: scale(1);
-
+        height: 150px;
     }
 }
