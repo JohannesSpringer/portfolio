@@ -1,10 +1,24 @@
 <div class="portfolios">
     <h1>Portfolio</h1>
-    <div class="portfolio-intro">This page is a sample of my work - please feel free to try them out.</div>
+    <div class="portfolio-intro">Explore a selection of my work here - Interact with projects to see my skills in action
+    </div>
     <div class="portfolio" *ngFor="let prj of projects; index as i">
         <div class="portfolio-counter">
             {{ ("00" + (i+1)).slice(-2) }}/{{ ("00" + (projects.length)).slice(-2) }}
         </div>
+        <div class="portfolio-img">
+            <img src="{{ prj.img }}" alt="">
+        </div>
+        <div class="portfolio-info">
+            <h2>{{ prj.name }}</h2>
+            <div class="portfolio-techstack">{{ prj.techStack }}</div>
+            <p>{{ prj.descripption }}</p>
+            <form>
+                <button type="submit" formaction="{{ prj.github }}" class="portfolio-github-button">
+                    Github
+                </button>
+            </form>
+        </div>
     </div>
-    
+
 </div>

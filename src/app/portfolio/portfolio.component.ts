@@ -9,16 +9,16 @@ export class PortfolioComponent {
   @Input() projects = [
     {
       name: "Join",
-      img: "",
-      techStack: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
-      github: "",
+      img: "./assets/img/projects/join.png",
+      techStack: 'Angular | TypeScript | HTML | CSS | Firebase',
+      github: "https://www.google.de",
       descripption: `Task manager inspired by the Kanban System. Create and organize tasks
         using drag and drop functions, assign users and categories.`
     },
     {
       name: "El Pollo Loco",
       img: "",
-      techStack: ['HTML', 'CSS'],
+      techStack: 'HTML | CSS',
       github: "",
       descripption: ""
     }
