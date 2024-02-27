@@ -13,14 +13,16 @@ export class PortfolioComponent {
       techStack: 'Angular | TypeScript | HTML | CSS | Firebase',
       github: "https://www.google.de",
       descripption: `Task manager inspired by the Kanban System. Create and organize tasks
-        using drag and drop functions, assign users and categories.`
+        using drag and drop functions, assign users and categories.`,
+      hovered: false
     },
     {
       name: "El Pollo Loco",
       img: "",
       techStack: 'HTML | CSS',
       github: "",
-      descripption: ""
+      descripption: "",
+      hovered: false
     }
   ];
 }

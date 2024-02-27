@@ -10,6 +10,7 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { MySkillsComponent } from './my-skills/my-skills.component';
 import { ArrowComponent } from './arrow/arrow.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
