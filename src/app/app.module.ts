@@ -11,6 +11,8 @@ import { MySkillsComponent } from './my-skills/my-skills.component';
 import { ArrowComponent } from './arrow/arrow.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { ContactformComponent } from './contactform/contactform.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +23,14 @@ import { CommonModule } from '@angular/common';
     AboutMeComponent,
     MySkillsComponent,
     ArrowComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    ContactformComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
