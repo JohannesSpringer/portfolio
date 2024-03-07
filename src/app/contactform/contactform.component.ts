@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contactform',
@@ -7,8 +8,16 @@ import { Component } from '@angular/core';
 })
 export class ContactformComponent {
 
+  contactData = {
+    name: "",
+    email:"",
+    message:"",
+  }
 
-  sendMail() {
-    console.log("Gesendet");    
+  sendMail(ngForm: NgForm) {
+    if(ngForm.valid && ngForm.submitted) {
+      console.log("Gesendet", this.contactData);    
+
+    }
   }
 }

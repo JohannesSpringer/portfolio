@@ -1,14 +1,19 @@
 <div class="contactform">
-    <form (ngSubmit)="sendMail()">
+    <form (ngSubmit)="sendMail(contactForm)" #contactForm="ngForm">
 
         <label for="name">Your name</label>
-        <input type="text" name="name" placeholder="Your name">
+        <input [(ngModel)]="contactData.name" type="text" name="name" placeholder="Your name" required>
 
         <label for="emal">Your email</label>
-        <input type="text" name="email" placeholder="Your email">
+        <input [(ngModel)]="contactData.email" type="text" name="email" placeholder="Your email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
 
         <label for="message">Your message</label>
-        <input type="textarea" name="message" placeholder="Your message">
+        <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message" placeholder="Your message..." required></textarea>
+        <!-- @if (!message.valid && message.touched) {
+            <span>Please enter a message</span>
+        } -->
+
+        <input type="submit" value="Submit">
 
     </form>
 </div>
