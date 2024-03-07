@@ -12,12 +12,14 @@ export class ContactformComponent {
     name: "",
     email:"",
     message:"",
-  }
+  };
+  formSubmitted = false;
 
   sendMail(ngForm: NgForm) {
     if(ngForm.valid && ngForm.submitted) {
       console.log("Gesendet", this.contactData);    
 
     }
+    this.formSubmitted = true;
   }
 }
