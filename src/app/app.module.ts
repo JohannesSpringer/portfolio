@@ -13,6 +13,9 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ContactformComponent } from './contactform/contactform.component';
+import { provideHttpClient } from '@angular/common/http';
+import { provideRouter } from '@angular/router';
+import { routes } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -30,9 +33,9 @@ import { ContactformComponent } from './contactform/contactform.component';
     BrowserModule,
     AppRoutingModule,
     CommonModule,
-    FormsModule
+    FormsModule,
   ],
-  providers: [],
+  providers: [provideRouter(routes), provideHttpClient()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
