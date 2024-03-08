@@ -16,6 +16,40 @@
         color:  var(--background-clr);
         text-align: center;
         padding: 12px;
+        margin-bottom: 0;
+    }
+    
+    form {
+        padding: 12px;
+    }
+
+    input, textarea {
+        border: none;
+        width: calc(100% - 30px);
+        height: 40px;
+        border-bottom: 2px solid var(--background-clr);
+        padding: 4px 15px 2px 15px;
+        color: var(--background-clr);
+        background-color: black;
+        font-family: 'Overpass', 'sans-serif';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19.2px;
+
+        &:focus-visible {
+            padding: 0px 11px 0px 11px;
+            border: 4px solid var(--background-clr);
+            outline: none;
+        }
+    }
+
+    textarea {
+        height: 200px;
+        padding-top: 16px;
+
+        &:focus-visible {
+            padding-top: 12px;
+        }
     }
 }
 

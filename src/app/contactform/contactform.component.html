@@ -7,7 +7,7 @@
     <form (ngSubmit)="sendMail(contactForm)" #contactForm="ngForm">
 
         <label for="name">Your name</label>
-        <input #name="ngModel" [(ngModel)]="contactData.name" type="text" name="name" placeholder="Your name" required>
+        <input #name="ngModel" ngClass="input-name" [(ngModel)]="contactData.name" type="text" name="name" placeholder="Your name" required>
         <span *ngIf="!name.valid && formSubmitted">Please enter a name</span>
 
         <label for="email">Your email</label>
@@ -17,7 +17,7 @@
 
         <label for="message">Your message</label>
         <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message"
-            minlength="4" placeholder="Your message..." required></textarea>
+            minlength="4" placeholder="Your message" required></textarea>
         <span *ngIf="!message.valid && formSubmitted">Please enter a message</span>
 
         <input type="submit" value="Submit">
