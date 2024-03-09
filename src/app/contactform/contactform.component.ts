@@ -16,8 +16,9 @@ export class ContactformComponent {
     email:"",
     message:"",
   };
-  formSubmitted = false;
-  mailTest = true;
+  inputFocused : boolean[] = [false, false, false];
+  formSubmitted : boolean = false;
+  mailTest : boolean = true;
 
   post = {
     endPoint: 'https://deineDomain.de/sendMail.php',
@@ -48,5 +49,13 @@ export class ContactformComponent {
       ngForm.resetForm();
     }
     this.formSubmitted = true;
+  }
+
+  onInputFocus(i : number) {
+    this.inputFocused[i] = true; 
+  }
+
+  onInputBlur(i : number) {
+    this.inputFocused[i] = false;   
   }
 }

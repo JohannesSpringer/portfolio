@@ -13,33 +13,58 @@
     }
 
     p {
-        color:  var(--background-clr);
+        color: var(--background-clr);
         text-align: center;
         padding: 12px;
         margin-bottom: 0;
     }
-    
+
     form {
         padding: 12px;
+        font-family: 'Overpass', 'sans-serif';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19.2px;
+        color: var(--background-clr);
     }
 
-    input, textarea {
+    .input-container {
+        position: relative;
+        margin-top: 20px;
+    }
+
+    label {
+        position: absolute;
+        background-color: black;
+        top: -12px;
+        left: 12px;
+        padding: 4px;
+        opacity: 0;
+    }
+
+    .show-label {
+        opacity: 1;
+    }
+
+    input,
+    textarea {
         border: none;
         width: calc(100% - 30px);
         height: 40px;
         border-bottom: 2px solid var(--background-clr);
         padding: 4px 15px 2px 15px;
-        color: var(--background-clr);
         background-color: black;
-        font-family: 'Overpass', 'sans-serif';
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 19.2px;
+        cursor: pointer;
+        color: var(--background-clr);
 
         &:focus-visible {
             padding: 0px 11px 0px 11px;
             border: 4px solid var(--background-clr);
             outline: none;
+        }
+
+        &:focus::placeholder {
+            color: transparent;
         }
     }
 

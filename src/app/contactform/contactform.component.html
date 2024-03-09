@@ -6,19 +6,26 @@
 
     <form (ngSubmit)="sendMail(contactForm)" #contactForm="ngForm">
 
-        <label for="name">Your name</label>
-        <input #name="ngModel" ngClass="input-name" [(ngModel)]="contactData.name" type="text" name="name" placeholder="Your name" required>
-        <span *ngIf="!name.valid && formSubmitted">Please enter a name</span>
+        <div class="input-container">
+            <label [class.show-label]="inputFocused[0]" for="name">Your name</label>
+            <input #name="ngModel" ngClass="input-name" [(ngModel)]="contactData.name" type="text" name="name"
+                (focus)="onInputFocus(0)" (blur)="onInputBlur(0)" placeholder="Your name" required>
+            <span *ngIf="!name.valid && formSubmitted">Please enter a name</span>
+        </div>
 
-        <label for="email">Your email</label>
-        <input #email="ngModel" [(ngModel)]="contactData.email" type="email" name="email" placeholder="Your email" required
-            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
-        <span *ngIf="!email.valid && formSubmitted">Please enter a message</span>
+        <div class="input-container">
+            <label [class.show-label]="inputFocused[1]" for="email">Your email</label>
+            <input #email="ngModel" [(ngModel)]="contactData.email" type="email" name="email" placeholder="Your email"
+            (focus)="onInputFocus(1)" (blur)="onInputBlur(1)" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+            <span *ngIf="!email.valid && formSubmitted">Please enter a message</span>
+        </div>
 
-        <label for="message">Your message</label>
-        <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message"
-            minlength="4" placeholder="Your message" required></textarea>
-        <span *ngIf="!message.valid && formSubmitted">Please enter a message</span>
+        <div class="input-container">
+            <label [class.show-label]="inputFocused[2]" for="message">Your message</label>
+            <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message" minlength="4"
+            (focus)="onInputFocus(2)" (blur)="onInputBlur(2)" placeholder="Your message" required></textarea>
+            <span *ngIf="!message.valid && formSubmitted">Please enter a message</span>
+        </div>
 
         <input type="submit" value="Submit">
 
