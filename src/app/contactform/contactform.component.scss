@@ -43,6 +43,43 @@
         span {
             color: var(--error);
         }
+
+        input,
+        textarea {
+            border: none;
+            width: calc(100% - 30px);
+            height: 40px;
+            border-bottom: 2px solid var(--background-clr);
+            padding: 4px 15px 2px 15px;
+            margin-bottom: 12px;
+            background-color: black;
+            cursor: pointer;
+            color: var(--background-clr);
+
+            &:focus-visible {
+                padding: 0px 11px 0px 11px;
+                border: 4px solid var(--background-clr);
+                outline: none;
+            }
+
+            &:focus::placeholder {
+                color: transparent;
+            }
+
+            // &:-internal-autofill-selected {
+            //     background-color: black !important;
+            // }
+        }
+
+        textarea {
+            height: 200px;
+            padding-top: 16px;
+            resize: none;
+
+            &:focus-visible {
+                padding-top: 12px;
+            }
+        }
     }
 
     label {
@@ -58,45 +95,31 @@
         opacity: 1;
     }
 
-    input,
-    textarea {
-        border: none;
-        width: calc(100% - 30px);
-        height: 40px;
-        border-bottom: 2px solid var(--background-clr);
-        padding: 4px 15px 2px 15px;
-        margin-bottom: 12px;
-        background-color: black;
-        cursor: pointer;
-        color: var(--background-clr);
-
-        &:focus-visible {
-            padding: 0px 11px 0px 11px;
-            border: 4px solid var(--background-clr);
-            outline: none;
-        }
-
-        &:focus::placeholder {
-            color: transparent;
-        }
-
-        // &:-internal-autofill-selected {
-        //     background-color: black !important;
-        // }
-    }
-
-    textarea {
-        height: 200px;
-        padding-top: 16px;
-        resize: none;
-
-        &:focus-visible {
-            padding-top: 12px;
-        }
-    }
-
     .thin-border {
         border: 1px solid var(--background-clr);
+    }
+
+    .privacy-policy-check {
+        display: flex;
+
+        p {
+            text-align: left;
+            margin: 0;
+            font-size: 14px;
+            line-height: 16.8px;
+            color: white;
+        }
+
+        button {
+            color: var(--text-clr-green);
+            width: 101px;
+            background-color: transparent;
+            border: none;
+
+            &:hover {
+                font-weight: 700;
+            }
+        }
     }
 }
 
