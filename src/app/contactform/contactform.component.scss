@@ -99,26 +99,64 @@
         border: 1px solid var(--background-clr);
     }
 
-    .privacy-policy-check {
+    .checkbox-container {
+        box-sizing: border-box;
         display: flex;
+        align-items: center;
+        font-size: 14px;
+        line-height: 16.8px;
+        position: relative;
 
-        p {
-            text-align: left;
-            margin: 0;
-            font-size: 14px;
-            line-height: 16.8px;
-            color: white;
+        label {
+            position: unset;
+            cursor: pointer;
+            display: flex;
+            color: var(--background-clr);
+            opacity: 1;
+            align-items: center;
+            z-index: 2;
+
+            button {
+                border: none;
+                width: 101px;
+                color: var(--text-clr-green);
+                background-color: transparent;
+
+                &:hover {
+                    font-weight: 700;
+                }
+            }
         }
 
-        button {
-            color: var(--text-clr-green);
-            width: 101px;
-            background-color: transparent;
-            border: none;
+        input[type="checkbox"] {
+            cursor: pointer;
+            opacity: 0;
+            position: absolute;
+        }
 
-            &:hover {
-                font-weight: 700;
-            }
+        label::before {
+            content: '';
+            width: 14px;
+            height: 14px;
+            margin: 3px;
+            border-radius: 2px;
+            border: 2px solid var(--background-clr);
+            
+            margin-right: 8px;
+        }
+
+        label:hover {
+            background-color: transparent;
+        }
+
+        .checkbox-hover-circle {
+            width: 24px;
+            height: 24px;
+            background-color: var(--text-clr-green);
+            border-radius: 100%;
+            position: absolute;
+            left: 4px;
+            z-index: 1;
         }
     }
 }
