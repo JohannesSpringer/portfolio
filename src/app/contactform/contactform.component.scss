@@ -141,7 +141,6 @@
             margin: 3px;
             border-radius: 2px;
             border: 2px solid var(--background-clr);
-            
             margin-right: 8px;
         }
 
@@ -157,6 +156,13 @@
             position: absolute;
             left: 4px;
             z-index: 1;
+        }
+
+        input[type="checkbox"]:checked + label::before {
+            content: '\002714';
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
 }

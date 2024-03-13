@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .contactform {
   padding: 20px;
   background-color: black;
@@ -134,6 +135,12 @@
   position: absolute;
   left: 4px;
   z-index: 1;
+}
+.contactform .checkbox-container input[type=checkbox]:checked + label::before {
+  content: "✔";
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .background-change {
