@@ -33,19 +33,20 @@
                 placeholder="Your message" required></textarea>
             <img *ngIf="!message.valid && formSubmitted" src="./../../assets/img/error.png" srcset="">
             <img *ngIf="message.valid && formSubmitted" src="./../../assets/img/success.png" srcset="">
+            <!-- <span [ngStyle]="{ 'opacity': (!message.valid && formSubmitted) ? 1 : 0 }">Your message is empty</span> -->
             <span *ngIf="!message.valid && formSubmitted">Your message is empty</span>
         </div>
 
         <div class="checkbox-container">
             <div class="checkbox-hover-circle"></div>
-            <input type="checkbox" id="checkboxPrivacyPolicy">
+            <input [(ngModel)]="checkboxChecked" type="checkbox" id="checkboxPrivacyPolicy" name="checkboxPrivacyPolicy">
             <label for="checkboxPrivacyPolicy">
                 <span>I've read the <button>privacy policy</button> and agree to the processing of my data as
                     outlined.</span>
             </label>
         </div>
+        <span [ngStyle]="{ 'opacity': notCheckedAndSubmitted() ? 1 : 0 }" class="privacy-policy-missing">Please accept the privacy policy.</span>
 
-        <input type="submit" value="Submit">
-
+        <input type="submit" value="Say hello ;)" [ngClass]="checkboxChecked ? 'opacity-1' : '' ">
     </form>
 </div>

@@ -8,17 +8,18 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./contactform.component.scss']
 })
 export class ContactformComponent {
+  mailTest: boolean = true;
 
   http = inject(HttpClient);
 
   contactData = {
     name: "",
-    email:"",
-    message:"",
+    email: "",
+    message: "",
   };
-  inputFocused : boolean[] = [false, false, false];
-  formSubmitted : boolean = false;
-  mailTest : boolean = true;
+  inputFocused: boolean[] = [false, false, false];
+  formSubmitted: boolean = false;
+  checkboxChecked: boolean = false;
 
   post = {
     endPoint: 'https://deineDomain.de/sendMail.php',
@@ -32,7 +33,8 @@ export class ContactformComponent {
   };
 
   sendMail(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    this.checkboxChecked = ngForm.controls['checkboxPrivacyPolicy'].value;
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest && this.checkboxChecked) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
@@ -44,18 +46,22 @@ export class ContactformComponent {
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+    } else if (ngForm.submitted && ngForm.form.valid && this.checkboxChecked && this.mailTest) {
 
       ngForm.resetForm();
     }
     this.formSubmitted = true;
   }
 
-  onInputFocus(i : number) {
-    this.inputFocused[i] = true; 
+  onInputFocus(i: number) {
+    this.inputFocused[i] = true;
   }
 
-  onInputBlur(i : number) {
-    this.inputFocused[i] = false;   
+  onInputBlur(i: number) {
+    this.inputFocused[i] = false;
+  }
+
+  notCheckedAndSubmitted(): boolean {
+    return !this.checkboxChecked && this.formSubmitted;
   }
 }
