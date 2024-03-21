@@ -8,7 +8,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./contactform.component.scss']
 })
 export class ContactformComponent {
-  mailTest: boolean = true;
+  mailTest: boolean = false;
 
   http = inject(HttpClient);
 
@@ -22,7 +22,7 @@ export class ContactformComponent {
   checkboxChecked: boolean = false;
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://johannes-springer.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -38,7 +38,6 @@ export class ContactformComponent {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-
             ngForm.resetForm();
           },
           error: (error) => {

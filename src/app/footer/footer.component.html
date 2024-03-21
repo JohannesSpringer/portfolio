@@ -1,0 +1,22 @@
+<div class="footer">
+    <div class="info">
+        <div class="personal-links">
+            <div class="app-link" *ngFor="let link of appLinks">
+                <img src="{{ link.image }}" alt="" (click)="openLink(link.link)">
+            </div>
+        </div>
+        <div class="creater">
+            <div class="personal-logo">
+                [<span>J</span>
+                <div></div>
+                <span>S</span>]
+            </div>
+            <div class="personal-mail">
+                johannes.springer93&#64;gmx.de
+            </div>
+        </div>
+    </div>
+    <div class="legal-notice">
+        Legal notice
+    </div>
+</div>

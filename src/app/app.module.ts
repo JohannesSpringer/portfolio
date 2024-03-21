@@ -16,6 +16,7 @@ import { ContactformComponent } from './contactform/contactform.component';
 import { provideHttpClient } from '@angular/common/http';
 import { provideRouter } from '@angular/router';
 import { routes } from './app-routing.module';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { routes } from './app-routing.module';
     MySkillsComponent,
     ArrowComponent,
     PortfolioComponent,
-    ContactformComponent
+    ContactformComponent, 
+    FooterComponent
   ],
   imports: [
     BrowserModule,
