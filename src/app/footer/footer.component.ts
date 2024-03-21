@@ -25,9 +25,18 @@ export class FooterComponent {
       "link": ""
     },
   ];
+  isClicked: boolean = false;
 
   openLink(link: string) {
     window.open(link, '_blank');
+  }
+
+  addClass() {
+    this.isClicked = true;
+  }
+
+  removeClass() {
+    this.isClicked = false;
   }
 
 }

@@ -24,6 +24,12 @@
         justify-content: center;
         align-items: center;
         cursor: pointer;
+        transition: transform 0.2s ease;
+
+        &:hover {
+            transform: translateY(-15px);
+
+        }
     }
 
     .creater {
