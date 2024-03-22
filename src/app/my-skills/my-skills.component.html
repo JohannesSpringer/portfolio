@@ -2,7 +2,9 @@
     <h1>My skills</h1>
     <div class="my-skills-icons">
         <div class="skill" *ngFor="let skill of skills">
-            <img src="../../assets/img/icons/{{ skill[1] }}.png" alt="">
+            <div class="skill-img-frame">
+                <img src="../../assets/img/icons/{{ skill[1] }}.png" class="skill-icon">
+            </div>
             <span>{{ skill[0] }}</span>
         </div>
     </div>
