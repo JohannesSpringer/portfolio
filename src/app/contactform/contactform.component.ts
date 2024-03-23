@@ -34,22 +34,32 @@ export class ContactformComponent {
 
   sendMail(ngForm: NgForm) {
     this.checkboxChecked = ngForm.controls['checkboxPrivacyPolicy'].value;
+    this.formSubmitted = true;
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest && this.checkboxChecked) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            ngForm.resetForm();
+            setTimeout(() => {
+              ngForm.resetForm();
+              this.formSubmitted = false;
+            }, 5000);
           },
           error: (error) => {
             console.error(error);
           },
-          complete: () => console.info('send post complete'),
+          complete: () => {
+            console.info('send post complete');
+          },
+
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.checkboxChecked && this.mailTest) {
-
-      ngForm.resetForm();
+      // ngForm.resetForm();
+      console.log("Test Mail success");
+      setTimeout(() => {
+        ngForm.resetForm();
+        this.formSubmitted = false;
+      }, 5000);
     }
-    this.formSubmitted = true;
   }
 
   onInputFocus(i: number) {
