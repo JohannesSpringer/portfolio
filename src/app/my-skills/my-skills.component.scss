@@ -28,10 +28,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            // justify-content: center;
             gap: 10px;
             width: 91px;
-            // height: 89px;
             margin-bottom: 30px;
             overflow: hidden;
 
@@ -47,6 +45,8 @@
                 img {
                     animation: icon-animation 260ms ease-in-out;
                 }
+
+                animation: change-color 800ms linear;
             }
         }
     }
@@ -61,61 +61,69 @@
     .skill-icon {
         height: 60px;
     }
+}
 
-    @keyframes icon-animation {
-        0% {
-            transform: translateX(0);
-        }
+@keyframes icon-animation {
+    0% {
+        transform: translateX(0);
+    }
 
-        19% {
-            transform: translateX(51px);
-            transition-duration: 50ms;
-            animation-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
-        }
+    19% {
+        transform: translateX(51px);
+        transition-duration: 50ms;
+        animation-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    }
 
-        38% {
-            // width: 54px;
-            height: 44px;
-            transition-delay: 1ms;
-            transition-duration: 50ms;
-            animation-timing-function: ease-out;
-        }
+    38% {
+        height: 44px;
+        transition-delay: 1ms;
+        transition-duration: 50ms;
+        animation-timing-function: ease-out;
+    }
 
-        50% {
-            transform: translateX(-21px);
-            transition-delay: 1ms;
-            transition-duration: 50ms;
-            animation-timing-function: ease-in;
-        }
+    57% {
+        transform: translateX(-21px);
+        transition-delay: 1ms;
+        transition-duration: 50ms;
+        animation-timing-function: ease-in;
+    }
 
-        60% {
-            height: 60px;
-            transform: translateX(-16px);
-            transition-delay: 1ms;
-            transition-duration: 50ms;
-            animation-timing-function: ease-in;
-        }
+    76% {
+        height: 60px;
+        transform: translateX(-16px);
+        transition-delay: 1ms;
+        transition-duration: 50ms;
+        animation-timing-function: ease-in;
+    }
 
-        70% {
-            transform: translateX(18px);
-            transition-delay: 1ms;
-            transition-duration: 50ms;
-            animation-timing-function: ease-in;
-        }
+    95% {
+        transform: translateX(18px);
+        transition-delay: 1ms;
+        transition-duration: 50ms;
+        animation-timing-function: ease-in;
+    }
 
-        80% {
-            transform: translateX(18px);
-            transition-delay: 800ms;
-            transition-duration: 10ms;
-            animation-timing-function: ease-in;
-        }
+    99% {
+        transform: translateX(18px);
+        transition-delay: 800ms;
+        transition-duration: 10ms;
+        animation-timing-function: ease-in;
+    }
 
-        100% {
-            transform: translateX(0);
-        }
+    100% {
+        transform: translateX(0);
+    }
+}
 
-        // 100% {
-        //     transform: translateX(150px);
-        // }
+@keyframes change-color {
+    0% {
+        color: var(--text-clr-green);
+        animation-timing-function: linear;
+    }
+
+    100% {
+        transition-duration: 800ms;
+        color: var(--text-clr-green);
+        animation-timing-function: linear;
     }
 }
