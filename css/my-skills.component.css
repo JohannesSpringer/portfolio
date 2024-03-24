@@ -39,6 +39,9 @@
   line-height: 19.2px;
   text-align: center;
 }
+.my-skills .my-skills-icons .skill:hover {
+  animation: change-color 800ms linear;
+}
 .my-skills .my-skills-icons .skill:hover img {
   animation: icon-animation 260ms ease-in-out;
 }
@@ -51,6 +54,7 @@
 .my-skills .skill-icon {
   height: 60px;
 }
+
 @keyframes icon-animation {
   0% {
     transform: translateX(0);
@@ -66,26 +70,26 @@
     transition-duration: 50ms;
     animation-timing-function: ease-out;
   }
-  50% {
+  57% {
     transform: translateX(-21px);
     transition-delay: 1ms;
     transition-duration: 50ms;
     animation-timing-function: ease-in;
   }
-  60% {
+  76% {
     height: 60px;
     transform: translateX(-16px);
     transition-delay: 1ms;
     transition-duration: 50ms;
     animation-timing-function: ease-in;
   }
-  70% {
+  95% {
     transform: translateX(18px);
     transition-delay: 1ms;
     transition-duration: 50ms;
     animation-timing-function: ease-in;
   }
-  80% {
+  99% {
     transform: translateX(18px);
     transition-delay: 800ms;
     transition-duration: 10ms;
@@ -93,5 +97,16 @@
   }
   100% {
     transform: translateX(0);
+  }
+}
+@keyframes change-color {
+  0% {
+    color: var(--text-clr-green);
+    animation-timing-function: linear;
+  }
+  100% {
+    transition-duration: 800ms;
+    color: var(--text-clr-green);
+    animation-timing-function: linear;
   }
 }/*# sourceMappingURL=my-skills.component.css.map */

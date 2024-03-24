@@ -39,4 +39,10 @@ export class FooterComponent {
     this.isClicked = false;
   }
 
+  scrollToTop() {
+    document.getElementById("header")?.scrollIntoView({
+      behavior: 'smooth'
+    });
+  }
+
 }
