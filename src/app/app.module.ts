@@ -30,7 +30,7 @@ import { FooterComponent } from './footer/footer.component';
     ArrowComponent,
     PortfolioComponent,
     ContactformComponent, 
-    FooterComponent
+    FooterComponent, 
   ],
   imports: [
     BrowserModule,

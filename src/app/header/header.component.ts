@@ -139,16 +139,62 @@ import { Component } from '@angular/core';
           width: '40px',
         })),
       ]),
+    ]),
+    trigger('btnHover', [
+      state('normal', style({
+        width: '18px',
+        bottom: 0,
+        left: 0,
+        borderLeft: '4px solid black',
+        borderBottom: '4px solid black',
+      })),
+      state('hovered', style({
+        width: '42%',
+        borderLeft: 'none',
+        left: 'unset',
+        right: 0,
+      })),
+      transition('normal => hovered', [
+        animate('100ms ease-out', style({
+          width: '100%',
+          borderLeft: 'none',
+          left: 'unset',
+          right: 0,
+        })),
+        animate('100ms 10ms ease-out', style({
+          width: '42%',
+        }))
+      ]),
+      transition('hovered => normal', [
+        animate('40ms ease-out', style({
+          width: '18px',
+          bottom: 0,
+          left: 0,
+          borderLeft: '4px solid black',
+          borderBottom: '4px solid black',
+        }))
+      ]),
     ])
   ]
 })
 
 export class HeaderComponent {
   isOpen: boolean = false;
+  hoverButton = [
+    false,
+    false,
+    false
+  ];
 
   toggleMenu() {
     this.isOpen = !this.isOpen;
-    console.log(this.isOpen);
+  }
 
+  setHover(id: number) {
+    this.hoverButton[id] = true;  
+  }
+
+  resetHover(id: number) {
+    this.hoverButton[id] = false; 
   }
 }

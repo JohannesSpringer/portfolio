@@ -1,12 +1,24 @@
 <div class="header" id="header">
-    <div class="personal-logo">
-        [<span>J</span>
-        <div></div>
-        <span>S</span>]
+    <div class="header-top">
+        <div class="personal-logo">
+            [<span>J</span>
+            <div></div>
+            <span>S</span>]
+        </div>
+        <div class="burger-menu" (click)="toggleMenu()">
+            <div [@openClose]="isOpen ? 'open-s1' : 'closed-s1'"></div>
+            <div [@openClose]="isOpen ? 'open-s2' : 'closed-s2'"></div>
+            <div [@openClose]="isOpen ? 'open-s3' : 'closed-s3'"></div>
+        </div>
     </div>
-    <div class="burger-menu" (click)="toggleMenu()">
-        <div [@openClose]="isOpen ? 'open-s1' : 'closed-s1'"></div>
-        <div [@openClose]="isOpen ? 'open-s2' : 'closed-s2'"></div>
-        <div [@openClose]="isOpen ? 'open-s3' : 'closed-s3'"></div>
+    <div class="menu-buttons">
+        <div class="menu-btn" (mouseover)="setHover(0)" (mouseleave)="resetHover(0)">
+            <span>About me</span>
+            <div class="menu-btn-rect" [@btnHover]="hoverButton[0] ? 'hovered' : 'normal'"></div>
+        </div>
+        <div class="menu-btn" (mouseover)="setHover(1)" (mouseleave)="resetHover(1)">
+            <span>My skills</span>
+            <div class="menu-btn-rect" [@btnHover]="hoverButton[1] ? 'hovered' : 'normal'"></div>
+        </div>
     </div>
 </div>
