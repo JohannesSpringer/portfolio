@@ -4,5 +4,9 @@
         <div></div>
         <span>S</span>]
     </div>
-    <img src="./../../assets/img/menu-burger-s3.png" alt="Menü">
+    <div class="burger-menu" (click)="toggleMenu()">
+        <div [@openClose]="isOpen ? 'open-s1' : 'closed-s1'"></div>
+        <div [@openClose]="isOpen ? 'open-s2' : 'closed-s2'"></div>
+        <div [@openClose]="isOpen ? 'open-s3' : 'closed-s3'"></div>
+    </div>
 </div>
