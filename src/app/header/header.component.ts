@@ -91,10 +91,6 @@ import { Component } from '@angular/core';
         }))
       ]),
       transition('open-s1 => closed-s1', [
-        animate('50ms ease-out', style({
-          translate: '10px 14px',
-          transformOrigin: '0% 50%',
-        })),
         animate('50ms 10ms ease-out', style({
           translate: '20px 6px',
           rotate: '-40deg',
@@ -104,14 +100,14 @@ import { Component } from '@angular/core';
           rotate: '0deg',
         })),
         animate('50ms 10ms ease-out', style({
+          translate: '0px -2px',
           width: '20px',
-          rotate: '0deg',
+        })),
+        animate('50ms 10ms ease-out', style({
+          width: '40px',
         })),
       ]),
       transition('open-s2 => closed-s2', [
-        animate('50ms ease-out', style({
-          rotate: '40deg',
-        })),
         animate('50ms 10ms ease-out', style({
           rotate: '40deg',
         })),
@@ -121,14 +117,12 @@ import { Component } from '@angular/core';
         })),
         animate('50ms 10ms ease-out', style({
           width: '40px',
-          rotate: '0deg',
+        })),
+        animate('50ms 10ms ease-out', style({
+          width: '40px',
         })),
       ]),
       transition('open-s3 => closed-s3', [
-        animate('50ms ease-out', style({
-          translate: '-10px -14px',
-          transformOrigin: '100% 50%',
-        })),
         animate('50ms 10ms ease-out', style({
           translate: '-20px -6px',
           rotate: '-40deg',
@@ -139,7 +133,10 @@ import { Component } from '@angular/core';
         })),
         animate('50ms 10ms ease-out', style({
           width: '20px',
-          rotate: '0deg',
+          translate: '0px 2px',
+        })),
+        animate('50ms 10ms ease-out', style({
+          width: '40px',
         })),
       ]),
     ])
