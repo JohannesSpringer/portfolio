@@ -26,17 +26,17 @@ import { Component } from '@angular/core';
       state('closed-s1', style({
         width: '40px',
         translate: '0 -2px',
-        rotate: '0',
+        rotate: '0deg',
       })),
       state('closed-s2', style({
         width: '40px',
         translate: '0',
-        rotate: '0',
+        rotate: '0deg',
       })),
       state('closed-s3', style({
         width: '40px',
         translate: '0 2px',
-        rotate: '0',
+        rotate: '0deg',
       })),
       transition('closed-s1 => open-s1', [
         animate('40ms ease-out', style({
@@ -140,7 +140,7 @@ import { Component } from '@angular/core';
         })),
       ]),
     ]),
-    trigger('btnHover', [
+    trigger('hoverAnimation', [
       state('normal', style({
         width: '18px',
         bottom: 0,
@@ -148,24 +148,24 @@ import { Component } from '@angular/core';
         borderLeft: '4px solid black',
         borderBottom: '4px solid black',
       })),
-      state('hovered', style({
+      state('highlighted', style({
         width: '42%',
         borderLeft: 'none',
         left: 'unset',
         right: 0,
       })),
-      transition('normal => hovered', [
-        animate('100ms ease-out', style({
+      state('clicked', style({
+        width: '100%',
+        height: '100%',
+        border: '4px solid black',
+      })),
+      transition('highlighted => normal', [
+        animate('40ms ease-out', style({
           width: '100%',
-          borderLeft: 'none',
-          left: 'unset',
-          right: 0,
         })),
-        animate('100ms 10ms ease-out', style({
-          width: '42%',
-        }))
-      ]),
-      transition('hovered => normal', [
+        animate('1ms linear', style({
+          left: 0,
+        })),
         animate('40ms ease-out', style({
           width: '18px',
           bottom: 0,
@@ -174,27 +174,92 @@ import { Component } from '@angular/core';
           borderBottom: '4px solid black',
         }))
       ]),
-    ])
+      transition('normal => highlighted', [
+        animate('40ms ease-out', style({
+          width: '18px',
+          bottom: 0,
+          left: 0,
+          borderLeft: '4px solid black',
+          borderBottom: '4px solid black',
+        })),
+        animate('1ms linear', style({
+          right: 0,
+        })),
+        animate('40ms ease-out', style({
+          width: '100%',
+        })),
+        
+      ]),
+      transition('hightlighted <=> clicked', [
+        animate('400ms ease-out', style({
+          width: '100%',
+        })),
+        animate('2000ms ease-out', style({
+          width: '100%',
+          height: '100%',
+          border: '4px solid black',
+        })),
+      ]),
+    ]),
+    // trigger('clickAnimation', [
+    //   state('hightlighted', style({
+    //     width: '42%',
+    //     borderLeft: 'none',
+    //     left: 'unset',
+    //     right: 0,
+    //   })),
+    //   state('clicked', style({
+    //     width: '100%',
+    //     height: '100%',
+    //     border: '4px solid black',
+    //   })),
+    //   transition('hightlighted <=> clicked', [
+    //     animate('4000ms ease-out'),
+    //   ]),
+    // ]),
   ]
 })
 
 export class HeaderComponent {
   isOpen: boolean = false;
-  hoverButton = [
-    false,
-    false,
-    false
-  ];
+  // hoverButton = [
+  //   false,
+  //   false,
+  //   false
+  // ];
+  // clicked = [
+  //   false,
+  //   false,
+  //   false
+  // ];
+
+  hoverState = 'normal';
+  clickState = 'highlighted';
 
   toggleMenu() {
     this.isOpen = !this.isOpen;
   }
 
   setHover(id: number) {
-    this.hoverButton[id] = true;  
+    // this.hoverButton[id] = true;
+    this.hoverState = 'highlighted';
   }
 
   resetHover(id: number) {
-    this.hoverButton[id] = false; 
+    // this.hoverButton[id] = false;
+    // this.clicked[id] = false;
+    this.hoverState = 'normal';
+    // this.clickState = 'hightlighted';
+  }
+
+  onClick(id: number) {
+    // this.clicked[id] = !this.clicked[id];
+    // this.clickState = (this.clickState === 'hightlighted') ? 'clicked' : 'hightlighted';
+    this.hoverState = 'clicked';
+  }
+
+  offClick(id: number) {
+    // this.clicked[id] = !this.clicked[id];
+    this.hoverState = 'hightlighted';
   }
 }
