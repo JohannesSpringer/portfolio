@@ -188,78 +188,70 @@ import { Component } from '@angular/core';
         animate('40ms ease-out', style({
           width: '100%',
         })),
-        
       ]),
-      transition('hightlighted <=> clicked', [
-        animate('400ms ease-out', style({
+      // Nicht funktionierende animation------------------------------
+      transition('hightlighted => clicked', [
+        animate('4000ms ease-out', style({
           width: '100%',
         })),
         animate('2000ms ease-out', style({
-          width: '100%',
+          // width: '100%',
           height: '100%',
-          border: '4px solid black',
+          borderLeft: '4px solid black',
+          borderRight: '4px solid black',
+        })),
+        animate('1000ms ease-out', style({
+          borderTop: '4px solid black',
         })),
       ]),
+      transition('clicked => normal', [
+        animate('5ms ease-out', style({
+          width: '100%',
+          height: '100%',
+          border: 'none',
+          borderLeft: 'none',
+          borderBottom: '4px solid black',
+        })),
+        animate('5ms linear', style({
+          left: 0,
+        })),
+        animate('80ms ease-out', style({
+          width: '18px',
+          height: '20px',
+        })),
+        animate('10ms ease-out', style({
+          borderLeft: '4px solid black',
+        }))
+      ]),
     ]),
-    // trigger('clickAnimation', [
-    //   state('hightlighted', style({
-    //     width: '42%',
-    //     borderLeft: 'none',
-    //     left: 'unset',
-    //     right: 0,
-    //   })),
-    //   state('clicked', style({
-    //     width: '100%',
-    //     height: '100%',
-    //     border: '4px solid black',
-    //   })),
-    //   transition('hightlighted <=> clicked', [
-    //     animate('4000ms ease-out'),
-    //   ]),
-    // ]),
   ]
 })
 
 export class HeaderComponent {
   isOpen: boolean = false;
-  // hoverButton = [
-  //   false,
-  //   false,
-  //   false
-  // ];
-  // clicked = [
-  //   false,
-  //   false,
-  //   false
-  // ];
-
-  hoverState = 'normal';
-  clickState = 'highlighted';
+  menuButtons = [
+    ['About me', 'id', 'normal'],
+    ['My skills', 'id', 'normal'],
+    ['Portfolio', 'id', 'normal'],
+  ]
 
   toggleMenu() {
     this.isOpen = !this.isOpen;
   }
 
   setHover(id: number) {
-    // this.hoverButton[id] = true;
-    this.hoverState = 'highlighted';
+    this.menuButtons[id][2] = 'highlighted';
   }
 
   resetHover(id: number) {
-    // this.hoverButton[id] = false;
-    // this.clicked[id] = false;
-    this.hoverState = 'normal';
-    // this.clickState = 'hightlighted';
+    this.menuButtons[id][2] = 'normal';
   }
 
   onClick(id: number) {
-    // this.clicked[id] = !this.clicked[id];
-    // this.clickState = (this.clickState === 'hightlighted') ? 'clicked' : 'hightlighted';
-    this.hoverState = 'clicked';
+    this.menuButtons[id][2] = 'clicked';
   }
 
   offClick(id: number) {
-    // this.clicked[id] = !this.clicked[id];
-    this.hoverState = 'hightlighted';
+    this.menuButtons[id][2] = 'highlighted';
   }
 }

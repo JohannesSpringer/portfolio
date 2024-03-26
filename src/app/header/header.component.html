@@ -12,13 +12,9 @@
         </div>
     </div>
     <div class="menu-buttons">
-        <div class="menu-btn" (mouseenter)="setHover(0)" (mouseleave)="resetHover(0)" (mousedown)="onClick(0)" (mouseup)="offClick(0)">
-            <span>About me</span>
-            <div class="menu-btn-rect" [@hoverAnimation]="hoverState"></div>
+        <div *ngFor="let btn of menuButtons, index as i" class="menu-btn" (mouseenter)="setHover(i)" (mouseleave)="resetHover(i)" (mousedown)="onClick(i)">
+            <span>{{ btn[0] }}</span>
+            <div class="menu-btn-rect" [@hoverAnimation]="menuButtons[i][2]"></div>
         </div>
-        <!-- <div class="menu-btn" (mouseenter)="setHover(1)" (mouseleave)="resetHover(1)" (mousedown)="onClick(1)" (mouseup)="offClick(1)">
-            <span>My skills</span>
-            <div class="menu-btn-rect" [@clickAnimation]="clickState" [@hoverAnimation]="hoverState"></div>
-        </div> -->
     </div>
 </div>
