@@ -201,23 +201,21 @@ import { Component } from '@angular/core';
           width: '100%',
         })),
       ]),
-      // Nicht funktionierende animation------------------------------
-      transition('hightlighted => clicked', [
-        animate('4000ms ease-out', style({
+      transition('highlighted => clicked', [
+        animate('20ms ease-out', style({
           width: '100%',
         })),
-        animate('2000ms ease-out', style({
-          // width: '100%',
+        animate('10ms ease-out', style({
           height: '100%',
           borderLeft: '4px solid black',
           borderRight: '4px solid black',
         })),
-        animate('1000ms ease-out', style({
+        animate('10ms ease-out', style({
           borderTop: '4px solid black',
         })),
       ]),
       transition('clicked => normal', [
-        animate('5ms ease-out', style({
+        animate('5ms ease-in', style({
           width: '100%',
           height: '100%',
           border: 'none',
@@ -227,11 +225,11 @@ import { Component } from '@angular/core';
         animate('5ms linear', style({
           left: 0,
         })),
-        animate('80ms ease-out', style({
+        animate('80ms ease-in', style({
           width: '18px',
           height: '20px',
         })),
-        animate('10ms ease-out', style({
+        animate('10ms ease-in', style({
           borderLeft: '4px solid black',
         }))
       ]),
@@ -261,9 +259,5 @@ export class HeaderComponent {
 
   onClick(id: number) {
     this.menuButtons[id][2] = 'clicked';
-  }
-
-  offClick(id: number) {
-    this.menuButtons[id][2] = 'highlighted';
   }
 }
