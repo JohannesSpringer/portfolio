@@ -61,7 +61,8 @@
   flex-direction: column;
   align-items: center;
   gap: 40px;
-  height: calc(50vh - 32px - 60px);
+  height: calc(100vh - 32px - 60px);
+  margin-top: 92px;
 }
 
 .menu-btn {
@@ -91,4 +92,8 @@
   left: 0;
   border-left: 4px solid black;
   border-bottom: 4px solid black;
+}
+
+.d-none {
+  display: none;
 }/*# sourceMappingURL=header.component.css.map */

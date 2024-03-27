@@ -38,6 +38,15 @@ import { Component } from '@angular/core';
         translate: '0 2px',
         rotate: '0deg',
       })),
+      state('menu-button-opened', style({
+        height: 'calc(100vh - 92px)',
+        display: 'flex',
+        marginTop: '92px',
+      })),
+      state('menu-button-closed', style({
+        display: 'none',
+        marginTop: '100vh',
+      })),
       transition('closed-s1 => open-s1', [
         animate('40ms ease-out', style({
           width: '20px',
@@ -138,6 +147,9 @@ import { Component } from '@angular/core';
         animate('50ms 10ms ease-out', style({
           width: '40px',
         })),
+      ]),
+      transition('menu-button-closed <=> menu-button-opened', [
+        animate('400ms 10ms ease-out'),
       ]),
     ]),
     trigger('hoverAnimation', [
