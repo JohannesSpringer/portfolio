@@ -41,11 +41,14 @@ import { Component } from '@angular/core';
       state('menu-button-opened', style({
         height: 'calc(100vh - 92px)',
         display: 'flex',
-        marginTop: '92px',
+        paddingTop: '92px',
+        backgroundColor: 'rgba(255, 252, 243, 1)',
+
       })),
       state('menu-button-closed', style({
         display: 'none',
-        marginTop: '100vh',
+        paddingTop: '100vh',
+        backgroundColor: 'rgba(255, 252, 243, 0)',
       })),
       transition('closed-s1 => open-s1', [
         animate('40ms ease-out', style({
@@ -148,8 +151,11 @@ import { Component } from '@angular/core';
           width: '40px',
         })),
       ]),
-      transition('menu-button-closed <=> menu-button-opened', [
-        animate('400ms 10ms ease-out'),
+      transition('menu-button-closed => menu-button-opened', [
+        animate('40ms 10ms ease-out'),
+      ]),
+      transition('menu-button-opened => menu-button-closed', [
+        animate('200ms 10ms ease-in'),
       ]),
     ]),
     trigger('hoverAnimation', [
