@@ -1,11 +1,12 @@
 .header {
-  position: absolute;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
   display: flex;
   flex-direction: column;
   z-index: 10;
+  background-color: rgb(255, 252, 243);
   opacity: 1;
 }
 
@@ -62,7 +63,7 @@
   flex-direction: column;
   align-items: center;
   gap: 40px;
-  height: calc(100vh - 32px - 60px);
+  height: calc(100vh - 214px);
   width: calc(100% - 50px);
   padding: 30px 25px 30px 25px;
   padding-top: 92px;
@@ -99,4 +100,11 @@
 
 .d-none {
   display: none;
+}
+
+.menu-footer {
+  margin-top: 32px;
+  width: 100vw !important;
+  position: absolute;
+  bottom: 0;
 }/*# sourceMappingURL=header.component.css.map */

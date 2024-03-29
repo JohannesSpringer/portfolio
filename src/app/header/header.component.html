@@ -12,9 +12,14 @@
         </div>
     </div>
     <div class="menu-buttons" [@openClose]="isOpen ? 'menu-button-opened' : 'menu-button-closed'">
-        <div *ngFor="let btn of menuButtons, index as i" class="menu-btn" (mouseenter)="setHover(i)" (mouseleave)="resetHover(i)" (mousedown)="onClick(i)">
+        <div *ngFor="let btn of menuButtons, index as i" class="menu-btn" (mouseenter)="setHover(i)"
+            (mouseleave)="resetHover(i)" (mousedown)="onClick(i)">
             <span>{{ btn[0] }}</span>
             <div class="menu-btn-rect" [@hoverAnimation]="menuButtons[i][2]"></div>
+        </div>
+        <div class="menu-footer">
+            <div class="background-change"></div>
+
         </div>
     </div>
 </div>

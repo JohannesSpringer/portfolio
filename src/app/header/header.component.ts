@@ -4,7 +4,9 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
+  styleUrls: [
+    './header.component.scss',
+    './../contactform/contactform.component.scss'],
   animations: [
     trigger('openClose', [
       state('open-s1', style({
@@ -39,10 +41,10 @@ import { Component } from '@angular/core';
         rotate: '0deg',
       })),
       state('menu-button-opened', style({
-        height: 'calc(100vh - 92px)',
+        height: 'calc(100vh - 214px)',
         display: 'flex',
         paddingTop: '92px',
-        backgroundColor: 'rgba(255, 252, 243, 1)',
+        backgroundColor: 'rgba(255, 252, 243, 0)',
 
       })),
       state('menu-button-closed', style({
@@ -152,10 +154,18 @@ import { Component } from '@angular/core';
         })),
       ]),
       transition('menu-button-closed => menu-button-opened', [
-        animate('40ms 10ms ease-out'),
+        animate('3500ms 10ms ease-out', style({
+          height: 'calc(100vh - 214px)',
+          display: 'flex',
+          paddingTop: '92px',
+          backgroundColor: 'rgba(255, 252, 243, 0)',
+        })),
+        animate('500ms 10ms ease-out', style({
+          backgroundColor: 'rgba(255, 252, 243, 1)',
+        })),
       ]),
       transition('menu-button-opened => menu-button-closed', [
-        animate('200ms 10ms ease-in'),
+        animate('2000ms 10ms ease-in'),
       ]),
     ]),
     trigger('hoverAnimation', [
