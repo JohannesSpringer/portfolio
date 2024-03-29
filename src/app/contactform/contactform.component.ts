@@ -8,20 +8,21 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./contactform.component.scss']
 })
 export class ContactformComponent {
+  mailTest: boolean = false;
 
   http = inject(HttpClient);
 
   contactData = {
     name: "",
-    email:"",
-    message:"",
+    email: "",
+    message: "",
   };
-  inputFocused : boolean[] = [false, false, false];
-  formSubmitted : boolean = false;
-  mailTest : boolean = true;
+  inputFocused: boolean[] = [false, false, false];
+  formSubmitted: boolean = false;
+  checkboxChecked: boolean = false;
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://johannes-springer.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -32,30 +33,44 @@ export class ContactformComponent {
   };
 
   sendMail(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    this.checkboxChecked = ngForm.controls['checkboxPrivacyPolicy'].value;
+    this.formSubmitted = true;
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest && this.checkboxChecked) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-
-            ngForm.resetForm();
+            setTimeout(() => {
+              ngForm.resetForm();
+              this.formSubmitted = false;
+            }, 5000);
           },
           error: (error) => {
             console.error(error);
           },
-          complete: () => console.info('send post complete'),
+          complete: () => {
+            console.info('send post complete');
+          },
+
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
-      ngForm.resetForm();
+    } else if (ngForm.submitted && ngForm.form.valid && this.checkboxChecked && this.mailTest) {
+      // ngForm.resetForm();
+      console.log("Test Mail success");
+      setTimeout(() => {
+        ngForm.resetForm();
+        this.formSubmitted = false;
+      }, 5000);
     }
-    this.formSubmitted = true;
   }
 
-  onInputFocus(i : number) {
-    this.inputFocused[i] = true; 
+  onInputFocus(i: number) {
+    this.inputFocused[i] = true;
   }
 
-  onInputBlur(i : number) {
-    this.inputFocused[i] = false;   
+  onInputBlur(i: number) {
+    this.inputFocused[i] = false;
+  }
+
+  notCheckedAndSubmitted(): boolean {
+    return !this.checkboxChecked && this.formSubmitted;
   }
 }

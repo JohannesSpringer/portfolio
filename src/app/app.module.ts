@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,7 @@ import { ContactformComponent } from './contactform/contactform.component';
 import { provideHttpClient } from '@angular/common/http';
 import { provideRouter } from '@angular/router';
 import { routes } from './app-routing.module';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -27,13 +29,15 @@ import { routes } from './app-routing.module';
     MySkillsComponent,
     ArrowComponent,
     PortfolioComponent,
-    ContactformComponent
+    ContactformComponent, 
+    FooterComponent, 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CommonModule,
     FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [provideRouter(routes), provideHttpClient()],
   bootstrap: [AppComponent]

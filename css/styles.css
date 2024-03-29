@@ -2,6 +2,7 @@
 :root {
   --background-clr: #FFFCF3;
   --text-clr-green: #00BC8F;
+  --error: #E61C40;
 }
 
 /* You can add global styles to this file, and also import other style files */

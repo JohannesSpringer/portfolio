@@ -27,9 +27,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
-  width: 26%;
+  gap: 10px;
+  width: 91px;
   margin-bottom: 30px;
+  overflow: hidden;
 }
 .my-skills .my-skills-icons .skill span {
   font-family: "Overpass", "sans-serif";
@@ -37,4 +38,75 @@
   font-size: 16px;
   line-height: 19.2px;
   text-align: center;
+}
+.my-skills .my-skills-icons .skill:hover {
+  animation: change-color 800ms linear;
+}
+.my-skills .my-skills-icons .skill:hover img {
+  animation: icon-animation 260ms ease-in-out;
+}
+.my-skills .skill-img-frame {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.my-skills .skill-icon {
+  height: 60px;
+}
+
+@keyframes icon-animation {
+  0% {
+    transform: translateX(0);
+  }
+  19% {
+    transform: translateX(51px);
+    transition-duration: 50ms;
+    animation-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  }
+  38% {
+    height: 44px;
+    transition-delay: 1ms;
+    transition-duration: 50ms;
+    animation-timing-function: ease-out;
+  }
+  57% {
+    transform: translateX(-21px);
+    transition-delay: 1ms;
+    transition-duration: 50ms;
+    animation-timing-function: ease-in;
+  }
+  76% {
+    height: 60px;
+    transform: translateX(-16px);
+    transition-delay: 1ms;
+    transition-duration: 50ms;
+    animation-timing-function: ease-in;
+  }
+  95% {
+    transform: translateX(18px);
+    transition-delay: 1ms;
+    transition-duration: 50ms;
+    animation-timing-function: ease-in;
+  }
+  99% {
+    transform: translateX(18px);
+    transition-delay: 800ms;
+    transition-duration: 10ms;
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes change-color {
+  0% {
+    color: var(--text-clr-green);
+    animation-timing-function: linear;
+  }
+  100% {
+    transition-duration: 800ms;
+    color: var(--text-clr-green);
+    animation-timing-function: linear;
+  }
 }/*# sourceMappingURL=my-skills.component.css.map */

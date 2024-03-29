@@ -1,18 +1,20 @@
 .header {
-    padding: 24px;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     z-index: 10;
-    background-color: var(--background-clr);
+    // background-color: rgba(255, 252, 243, 1);
+    opacity: 1;
+}
 
-    img {
-        height: 32px;
-        cursor: pointer;
-    }
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 50px);
+    padding: 30px 25px 30px 25px;
 }
 
 .personal-logo {
@@ -42,4 +44,65 @@
         z-index: 1;
         transform: rotateZ(10deg);
     }
+}
+
+.burger-menu {
+    display: flex;
+    flex-direction: column;
+    width: 40px;
+    height: 32px;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+    div {
+        width: 40px;
+        border-top: 4px solid black;
+    }
+}
+
+.menu-buttons {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    height: calc(100vh - 32px - 60px);
+    width: calc(100% - 50px);
+    padding: 30px 25px 30px 25px;
+    padding-top: 92px;
+}
+
+.menu-btn {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 80%;
+    cursor: pointer;
+
+    span {
+        width: 100%;
+        text-align: center;
+        font-family: 'Syne', 'sans-serif';
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 45px;
+    }
+}
+
+.menu-btn-rect {
+    position: absolute;
+    width: 18px;
+    height: 20px;
+    bottom: 0;
+    left: 0;
+    border-left: 4px solid black;
+    border-bottom: 4px solid black;
+}
+
+.d-none {
+  display: none;
 }

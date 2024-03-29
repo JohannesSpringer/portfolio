@@ -1,8 +1,20 @@
-<div class="header">
-    <div class="personal-logo">
-        [<span>J</span>
-        <div></div>
-        <span>S</span>]
+<div class="header" id="header">
+    <div class="header-top">
+        <div class="personal-logo">
+            [<span>J</span>
+            <div></div>
+            <span>S</span>]
+        </div>
+        <div class="burger-menu" (click)="toggleMenu()">
+            <div [@openClose]="isOpen ? 'open-s1' : 'closed-s1'"></div>
+            <div [@openClose]="isOpen ? 'open-s2' : 'closed-s2'"></div>
+            <div [@openClose]="isOpen ? 'open-s3' : 'closed-s3'"></div>
+        </div>
     </div>
-    <img src="./../../assets/img/menu-burger-s3.png" alt="Menü">
+    <div class="menu-buttons" [@openClose]="isOpen ? 'menu-button-opened' : 'menu-button-closed'">
+        <div *ngFor="let btn of menuButtons, index as i" class="menu-btn" (mouseenter)="setHover(i)" (mouseleave)="resetHover(i)" (mousedown)="onClick(i)">
+            <span>{{ btn[0] }}</span>
+            <div class="menu-btn-rect" [@hoverAnimation]="menuButtons[i][2]"></div>
+        </div>
+    </div>
 </div>
