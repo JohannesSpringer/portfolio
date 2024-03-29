@@ -1,5 +1,4 @@
 .header {
-    padding: 30px 25px 30px 25px;
     position: absolute;
     top: 0;
     left: 0;
@@ -14,7 +13,8 @@
 .header-top {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: calc(100% - 50px);
+    padding: 30px 25px 30px 25px;
 }
 
 .personal-logo {
@@ -68,6 +68,8 @@
     align-items: center;
     gap: 40px;
     height: calc(100vh - 32px - 60px);
+    width: calc(100% - 50px);
+    padding: 30px 25px 30px 25px;
     padding-top: 92px;
 }
 
