@@ -11,4 +11,28 @@
 
 .about-me-descr {
   padding: 12px;
+}
+
+.about-me-img {
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+  position: relative;
+  height: calc(100vw - 24px);
+}
+.about-me-img img {
+  width: calc(100% - 40px);
+  padding-left: 20px;
+  padding-top: 20px;
+  background-image: url("./../../assets/img/me/plaster-1128958_1920.jpg");
+  background-image: url("./../../assets/img/me/texture-1511759_1920.jpg");
+}
+.about-me-img .img-border {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: calc(100% - 28px);
+  height: calc(100% - 28px);
+  border: 4px solid black;
 }/*# sourceMappingURL=about-me.component.css.map */
