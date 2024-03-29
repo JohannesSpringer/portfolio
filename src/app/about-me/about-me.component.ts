@@ -17,7 +17,7 @@ import { Component } from '@angular/core';
         top: '20px',
         left: '20px'
       })),
-      transition('normal => hovered', [
+      transition('normal <=> hovered', [
         animate('100ms ease-in'),
       ])
     ])
@@ -28,5 +28,9 @@ export class AboutMeComponent {
 
   setHover() {
     this.isHovered = true;
+  }
+
+  resetHover() {
+    this.isHovered = false;
   }
 }
