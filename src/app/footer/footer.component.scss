@@ -17,21 +17,6 @@
         padding: 20px;
     }
 
-    .app-link {
-        width: 30px;
-        height: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        transition: transform 0.2s ease;
-
-        &:hover {
-            transform: translateY(-15px);
-
-        }
-    }
-
     .creater {
         display: flex;
         justify-content: center;
@@ -60,5 +45,20 @@
         font-size: 16px;
         line-height: 19.2px;
         cursor: pointer;
+    }
+}
+
+.app-link {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: translateY(-15px);
+
     }
 }

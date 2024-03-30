@@ -19,7 +19,15 @@
         </div>
         <div class="menu-footer">
             <div class="background-change"></div>
-
+            <div class="footer-info">
+                <h1>Say hi!</h1>
+                <div class="personal-mail">johannes.springer93&#64;gmx.de</div>
+                <div class="footer-icons">
+                    <div class="app-link" *ngFor="let link of appLinks">
+                        <img src="{{ link.image }}" alt="" (click)="openLink(link.link)">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'app-footer',
@@ -8,27 +9,15 @@ import { Component } from '@angular/core';
     './../header/header.component.scss']
 })
 export class FooterComponent {
-  appLinks = [
-    {
-      "name": "GitHub",
-      "image": "./../../assets/img/git-logo.png",
-      "link": "https://github.com/JohannesSpringer"
-    },
-    {
-      "name": "Mail",
-      "image": "./../../assets/img/mail-logo.png",
-      "link": ""
-    },
-    {
-      "name": "LinkedIn",
-      "image": "./../../assets/img/linkedin-logo.png",
-      "link": ""
-    },
-  ];
+  appLinks: any[];
   isClicked: boolean = false;
 
+  constructor(private sharedService: SharedService) {
+    this.appLinks = sharedService.appLinks;
+  }
+
   openLink(link: string) {
-    window.open(link, '_blank');
+    this.sharedService.openLink(link);
   }
 
   addClass() {

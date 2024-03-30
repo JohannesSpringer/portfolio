@@ -1,12 +1,14 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component } from '@angular/core';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: [
     './header.component.scss',
-    './../contactform/contactform.component.scss'],
+    './../contactform/contactform.component.scss',
+    './../footer/footer.component.scss'],
   animations: [
     trigger('openClose', [
       state('open-s1', style({
@@ -251,10 +253,20 @@ export class HeaderComponent {
     ['About me', 'id', 'normal'],
     ['My skills', 'id', 'normal'],
     ['Portfolio', 'id', 'normal'],
-  ]
+  ];
+  appLinks: any[];
+
+  constructor(private sharedService: SharedService) {
+    this.appLinks = sharedService.appLinks;
+  }
 
   toggleMenu() {
     this.isOpen = !this.isOpen;
+    if (this.isOpen) {
+      document.body.style.overflowY = 'hidden';
+    } else {
+      document.body.style.overflowY = '';
+    }
   }
 
   setHover(id: number) {
@@ -267,5 +279,9 @@ export class HeaderComponent {
 
   onClick(id: number) {
     this.menuButtons[id][2] = 'clicked';
+  }
+
+  openLink(link: string) {
+    this.sharedService.openLink(link);
   }
 }
