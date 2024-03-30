@@ -250,9 +250,9 @@ import { SharedService } from '../shared.service';
 export class HeaderComponent {
   isOpen: boolean = false;
   menuButtons = [
-    ['About me', 'id', 'normal'],
-    ['My skills', 'id', 'normal'],
-    ['Portfolio', 'id', 'normal'],
+    ['About me', 'aboutMe', 'normal', '92'],
+    ['My skills', 'mySkills', 'normal', '120'],
+    ['Portfolio', 'portfolio', 'normal', '92'],
   ];
   appLinks: any[];
 
@@ -283,5 +283,13 @@ export class HeaderComponent {
 
   openLink(link: string) {
     this.sharedService.openLink(link);
+  }
+
+  scrollToElement(elementId: string, offset: number) {
+    this.sharedService.scrollToElement(elementId, offset);
+  }
+
+  convertStringToNumber(str: string) {
+    return parseInt(str);
   }
 }

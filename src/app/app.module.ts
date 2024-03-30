@@ -29,8 +29,8 @@ import { FooterComponent } from './footer/footer.component';
     MySkillsComponent,
     ArrowComponent,
     PortfolioComponent,
-    ContactformComponent, 
-    FooterComponent, 
+    ContactformComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,4 +42,6 @@ import { FooterComponent } from './footer/footer.component';
   providers: [provideRouter(routes), provideHttpClient()],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  
+}

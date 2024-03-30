@@ -28,10 +28,13 @@ export class FooterComponent {
     this.isClicked = false;
   }
 
-  scrollToTop() {
-    document.getElementById("header")?.scrollIntoView({
-      behavior: 'smooth'
-    });
+  scrollToElement(elementId: string, offset: number) {
+    this.sharedService.scrollToElement(elementId, offset);
   }
 
+  // scrollToTop() {
+  //   document.getElementById("header")?.scrollIntoView({
+  //     behavior: 'smooth'
+  //   });
+  // }
 }

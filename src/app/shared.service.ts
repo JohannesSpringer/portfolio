@@ -28,4 +28,15 @@ export class SharedService {
   openLink(link: string) {
     window.open(link, '_blank');
   }
+
+  scrollToElement(elementId: string, offset: number) {
+    const element = document.getElementById(elementId);
+    if (element) {
+      const topOffset = element.offsetTop - offset;
+      // element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      window.scrollTo({ top: topOffset, behavior: 'smooth'});
+    }
+    console.log("Scrollen ausgeführt.");
+    
+  }
 }
