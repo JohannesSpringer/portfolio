@@ -6,7 +6,6 @@
   display: flex;
   flex-direction: column;
   z-index: 10;
-  background-color: rgb(255, 252, 243);
   opacity: 1;
 }
 
@@ -15,6 +14,7 @@
   justify-content: space-between;
   width: calc(100% - 50px);
   padding: 30px 25px 30px 25px;
+  background-color: var(--background-clr);
 }
 
 .personal-logo {

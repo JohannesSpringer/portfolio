@@ -44,7 +44,7 @@ import { Component } from '@angular/core';
         height: 'calc(100vh - 214px)',
         display: 'flex',
         paddingTop: '92px',
-        backgroundColor: 'rgba(255, 252, 243, 0)',
+        backgroundColor: 'rgba(255, 252, 243, 1)',
 
       })),
       state('menu-button-closed', style({
@@ -154,18 +154,10 @@ import { Component } from '@angular/core';
         })),
       ]),
       transition('menu-button-closed => menu-button-opened', [
-        animate('3500ms 10ms ease-out', style({
-          height: 'calc(100vh - 214px)',
-          display: 'flex',
-          paddingTop: '92px',
-          backgroundColor: 'rgba(255, 252, 243, 0)',
-        })),
-        animate('500ms 10ms ease-out', style({
-          backgroundColor: 'rgba(255, 252, 243, 1)',
-        })),
+        animate('40ms 10ms ease-out'),
       ]),
       transition('menu-button-opened => menu-button-closed', [
-        animate('2000ms 10ms ease-in'),
+        animate('200ms 10ms ease-in'),
       ]),
     ]),
     trigger('hoverAnimation', [
