@@ -8,7 +8,7 @@
         </div>
 
         <div class="portfolio-img" (mouseenter)="prj.hovered=true" (click)="openLink(prj.prjLink)">
-            <img class="project-img" src="{{ prj.img }}" alt="">
+            <img class="project-img" src="{{ prj.img }}" alt="" [ngClass]="prj.hovered ? 'project-img-hovered' : ''">
             <div *ngIf="prj.hovered" class="portfolio-img-border">
                 <img class="border-arrow" src="./../../assets/img/portfolio-arrow.png" alt="">
             </div>

@@ -4,7 +4,10 @@ import { SharedService } from '../shared.service';
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
-  styleUrls: ['./portfolio.component.scss']
+  styleUrls: ['./portfolio.component.scss'],
+  animations: [
+    
+  ]
 })
 export class PortfolioComponent {
   @Input() projects = [

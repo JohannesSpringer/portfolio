@@ -35,6 +35,12 @@
         filter: grayscale(100%);
       }
 
+      .project-img-hovered {
+        -webkit-filter: unset;
+        filter: unset;
+        animation: change-img-filter 0.2s linear;
+      }
+
       .portfolio-img-border {
         width: 308px;
         height: 166px;
@@ -157,5 +163,17 @@
 
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes change-img-filter {
+  0% {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+
+  100% {
+    -webkit-filter: unset;
+    filter: unset;
   }
 }
