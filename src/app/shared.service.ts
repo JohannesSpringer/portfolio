@@ -33,8 +33,7 @@ export class SharedService {
     const element = document.getElementById(elementId);
     if (element) {
       const topOffset = element.offsetTop - offset;
-      // element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      window.scrollTo({ top: topOffset, behavior: 'smooth'});
+      window.scrollTo({ top: topOffset, behavior: 'auto'});
     }
     console.log("Scrollen ausgeführt.");
     

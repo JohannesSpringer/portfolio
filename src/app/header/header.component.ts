@@ -47,7 +47,6 @@ import { SharedService } from '../shared.service';
         display: 'flex',
         paddingTop: '92px',
         backgroundColor: 'rgba(255, 252, 243, 1)',
-
       })),
       state('menu-button-closed', style({
         display: 'none',
