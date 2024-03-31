@@ -9,13 +9,13 @@ import { Component } from '@angular/core';
     trigger('meImg', [
       state('normal', style({
         opacity: '0',
-        top: '0',
-        left: '0'
+        // top: '20px',
+        // left: '0'
       })),
       state('hovered', style({
         opacity: '1',
-        top: '20px',
-        left: '20px'
+        // top: '20px',
+        // left: '20px'
       })),
       transition('normal <=> hovered', [
         animate('100ms ease-in'),

@@ -31,10 +31,4 @@ export class FooterComponent {
   scrollToElement(elementId: string, offset: number) {
     this.sharedService.scrollToElement(elementId, offset);
   }
-
-  // scrollToTop() {
-  //   document.getElementById("header")?.scrollIntoView({
-  //     behavior: 'smooth'
-  //   });
-  // }
 }

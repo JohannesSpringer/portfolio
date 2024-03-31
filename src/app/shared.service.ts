@@ -14,12 +14,12 @@ export class SharedService {
     {
       "name": "Mail",
       "image": "./../../assets/img/mail-logo.png",
-      "link": ""
+      "link": "mailto:johannes.springer93@gmx.de"
     },
     {
       "name": "LinkedIn",
       "image": "./../../assets/img/linkedin-logo.png",
-      "link": ""
+      "link": "https://www.linkedin.com/in/johannes-springer-6a2866140/"
     },
   ];
 
