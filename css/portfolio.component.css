@@ -106,6 +106,9 @@
   padding: 20px 60px 20px 60px;
   cursor: pointer;
 }
+.portfolios .portfolio:nth-of-type(odd) .portfolio-info p {
+  text-align: right;
+}
 
 @keyframes show-portfolio-img-border {
   0% {

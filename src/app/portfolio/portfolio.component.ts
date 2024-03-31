@@ -6,7 +6,7 @@ import { SharedService } from '../shared.service';
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.scss'],
   animations: [
-    
+
   ]
 })
 export class PortfolioComponent {
@@ -23,11 +23,11 @@ export class PortfolioComponent {
     },
     {
       name: "El Pollo Loco",
-      img: "",
-      techStack: 'HTML | CSS',
-      github: "",
-      prjLink: "",
-      descripption: "",
+      img: "./assets/img/projects/el-pollo-loco.png",
+      techStack: 'JavaScript | HTML | CSS',
+      github: "https://github.com/JohannesSpringer/ElPolloLoco",
+      prjLink: "https://johannes-springer.de/elpolloloco/",
+      descripption: "A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and tabasco bottles to fight against the killer chicken.",
       hovered: false
     }
   ];
