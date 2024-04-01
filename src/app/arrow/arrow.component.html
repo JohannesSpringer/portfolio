@@ -1,5 +1,5 @@
 <div class="arrow" [ngClass]="inverted ? 'mirror-x' : ''">
-    <div (mouseenter)="setClass()" [ngClass]="hovered ? 'arrow-left' : 'arrow-left-until-hover'">
+    <div (mouseenter)="setClass()" (touchstart)="setClass()" [ngClass]="hovered ? 'arrow-left' : 'arrow-left-until-hover'">
         <img src="../../assets/img/arrow-left.png" alt="">
         <div class="arrowline-left"></div>
     </div>

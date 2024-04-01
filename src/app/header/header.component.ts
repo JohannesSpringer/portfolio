@@ -43,9 +43,9 @@ import { SharedService } from '../shared.service';
         rotate: '0deg',
       })),
       state('menu-button-opened', style({
-        height: 'calc(100vh - 214px)',
+        height: 'calc(100vh - 134px)',
         display: 'flex',
-        paddingTop: '92px',
+        paddingTop: '12px',
         backgroundColor: 'rgba(255, 252, 243, 1)',
       })),
       state('menu-button-closed', style({
