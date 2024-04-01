@@ -18,7 +18,7 @@
             <div class="portfolio-techstack">{{ prj.techStack }}</div>
             <p>{{ prj.descripption }}</p>
             <form>
-                <button type="submit" formaction="{{ prj.github }}" class="portfolio-github-button">
+                <button type="submit" (click)="openLink(prj.github)" class="portfolio-github-button"> 
                     Github
                 </button>
             </form>

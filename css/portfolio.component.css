@@ -11,6 +11,9 @@
   animation-timing-function: ease-in-out;
   text-align: left;
 }
+.portfolios .portfolio {
+  margin-top: 32px;
+}
 .portfolios .portfolio .portfolio-counter {
   font-family: "Syne", "sans-serif";
   font-size: 23px;
