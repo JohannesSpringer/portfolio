@@ -48,4 +48,13 @@ h3 {
   70% {
     color: var(--text-clr-green);
   }
+}
+@media (min-width: 1440px) {
+  html {
+    display: flex;
+    justify-content: center;
+  }
+  body {
+    max-width: 1440px;
+  }
 }/*# sourceMappingURL=styles.css.map */

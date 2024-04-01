@@ -13,7 +13,6 @@
 body {
     margin: 0;
     background-color: var(--background-clr);
-    // font-family: 'Syne', 'sans-serif';
     font-family: 'Overpass', 'sans-serif';
     font-size: 23px;
     font-weight: 400;
@@ -55,5 +54,18 @@ h3 {
 
     70% {
         color: var(--text-clr-green);
+    }
+}
+
+// @media only screen and (min-width: 768px) {}
+
+@media (min-width: 1440px) {
+    html {
+        display: flex;
+        justify-content: center;
+    }
+    
+    body {
+        max-width: 1440px;
     }
 }
