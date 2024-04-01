@@ -62,7 +62,7 @@
   position: relative;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 20px;
   height: calc(100vh - 214px);
   width: calc(100% - 50px);
   padding: 30px 25px 30px 25px;
@@ -112,11 +112,16 @@
 .footer-info {
   background-color: black;
   padding: 20px;
+  padding-top: 0;
   color: var(--background-clr);
 }
 .footer-info .personal-mail {
   font-weight: 300;
-  line-height: 23px;
+  font-size: 20px;
+  line-height: 20px;
+}
+.footer-info h1 {
+  margin-bottom: 20px;
 }
 
 .footer-icons {
@@ -127,17 +132,15 @@
   margin-top: 20px;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 550px) {
   .header {
     display: flex;
     align-items: center;
   }
   .header-top {
     max-width: 1240px;
-    padding-left: 100px;
-    padding-right: 100px;
   }
-  .menu-buttons {
+  .menu-buttons > *:nth-last-child(n+2) {
     max-width: 580px;
   }
   .footer-info {
@@ -146,8 +149,11 @@
     align-items: center;
   }
   .footer-info > * {
-    width: 1240px;
-    padding-left: 100px;
-    padding-right: 100px;
+    width: calc(100% - 40px);
+  }
+  .footer-icons {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
   }
 }/*# sourceMappingURL=header.component.css.map */

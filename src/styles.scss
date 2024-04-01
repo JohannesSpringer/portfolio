@@ -57,14 +57,14 @@ h3 {
     }
 }
 
-// @media only screen and (min-width: 768px) {}
 
+// Media queries
 @media (min-width: 1440px) {
     html {
         display: flex;
         justify-content: center;
     }
-    
+
     body {
         max-width: 1440px;
     }

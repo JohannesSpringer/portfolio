@@ -1,14 +1,15 @@
 .arrow {
-  padding: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   height: 270px;
 }
 .arrow .arrow-left-until-hover {
   display: flex;
   width: 150px;
   height: 150px;
-  transform: translateX(25px);
+  transform: translateX(-25px);
   position: relative;
 }
 .arrow .arrow-left {
@@ -46,12 +47,10 @@
   0% {
     width: 150px;
     height: 150px;
-    transform: translateX(25px);
   }
   60% {
     width: 250px;
     height: 250px;
-    transform: translateX(-25px);
   }
 }
 @keyframes arrow-left-down-animation-line {
@@ -66,5 +65,13 @@
   }
   100% {
     height: 150px;
+  }
+}
+@media (min-width: 768px) {
+  .arrow-left-until-hover {
+    transform: translateX(-50px) !important;
+  }
+  .arrow-left {
+    transform: translateX(-50px) !important;
   }
 }/*# sourceMappingURL=arrow.component.css.map */

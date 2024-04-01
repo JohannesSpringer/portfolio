@@ -15,12 +15,10 @@
 
 .about-me-img {
   padding: 12px;
-  width: calc(100vw - 48px);
   justify-content: flex-start;
   align-items: flex-start;
   display: flex;
   position: relative;
-  height: calc(100vw - 48px);
 }
 .about-me-img img {
   width: 100%;
@@ -33,4 +31,19 @@
   width: calc(100% - 28px);
   height: calc(100% - 28px);
   border: 4px solid black;
+}
+
+@media (min-width: 768px) {
+  .about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .about-me-content {
+    display: flex;
+    justify-content: space-between;
+  }
+  .about-me-content > * {
+    width: 45%;
+  }
 }/*# sourceMappingURL=about-me.component.css.map */
