@@ -26,4 +26,11 @@
   font-family: "Overpass", sans-serif;
   width: 205px;
   text-align: right;
+}
+
+@media (max-width: 390px) {
+  h1 {
+    font-size: 40px;
+    line-height: 40px;
+  }
 }/*# sourceMappingURL=headline.component.css.map */
