@@ -1,5 +1,6 @@
-import { animate, animation, state, style, transition, trigger } from '@angular/animations';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component } from '@angular/core';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'app-about-me',
@@ -9,13 +10,9 @@ import { Component } from '@angular/core';
     trigger('meImg', [
       state('normal', style({
         opacity: '0',
-        // top: '20px',
-        // left: '0'
       })),
       state('hovered', style({
         opacity: '1',
-        // top: '20px',
-        // left: '20px'
       })),
       transition('normal <=> hovered', [
         animate('100ms ease-in'),
@@ -26,11 +23,17 @@ import { Component } from '@angular/core';
 export class AboutMeComponent {
   isHovered: boolean = false;
 
+  constructor(private sharedService: SharedService) {}
+
   setHover() {
     this.isHovered = true;
   }
 
   resetHover() {
     this.isHovered = false;
+  }
+
+  scrollToElement(elementId: string, offset: number) {
+    this.sharedService.scrollToElement(elementId, offset);
   }
 }

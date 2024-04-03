@@ -73,3 +73,10 @@
         font-weight: 400;
     }
 }
+
+@media (min-width: 1280px) {
+    .about-me {
+        max-width: 1440px;
+        
+    }
+}
