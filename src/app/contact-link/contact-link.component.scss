@@ -64,3 +64,9 @@
         background-position-y: calc(100% + 200px);
     }
 }
+
+@media (min-width: 768px) {
+    .msg-link {
+        display: none;
+    }
+}
