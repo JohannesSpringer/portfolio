@@ -1,6 +1,13 @@
 .portfolios {
   padding: 20px;
 
+  .portfolio-header {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+  }
+
   .portfolio-intro {
     margin-bottom: 64px;
   }
@@ -15,124 +22,129 @@
 
   .portfolio {
     margin-top: 32px;
+  }
 
-    .portfolio-counter {
-      font-family: "Syne", "sans-serif";
-      font-size: 23px;
-      font-weight: 700;
-      line-height: 27.6px;
-      text-align: right;
+  .portfolio-counter {
+    font-family: "Syne", "sans-serif";
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 27.6px;
+    text-align: right;
+  }
+
+  .portfolio-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .portfolio-img {
+    padding: 10px 0;
+    position: relative;
+    display: flex;
+
+    .project-img {
+      cursor: pointer;
+      width: 316px;
+      height: 174px;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
     }
 
-    .portfolio-img {
-      padding: 10px 0;
-      position: relative;
-      display: flex;
+    .project-img-hovered {
+      -webkit-filter: unset;
+      filter: unset;
+      animation: change-img-filter 0.2s linear;
+    }
 
-      .project-img {
-        cursor: pointer;
-        width: 316px;
-        height: 174px;
-        -webkit-filter: grayscale(100%);
-        filter: grayscale(100%);
-      }
+    .portfolio-img-border {
+      width: 308px;
+      height: 166px;
+      border: 4px solid black;
+      position: absolute;
+      top: 20px;
+      left: 10px;
+      animation: show-portfolio-img-border 0.2s linear;
 
-      .project-img-hovered {
-        -webkit-filter: unset;
-        filter: unset;
-        animation: change-img-filter 0.2s linear;
-      }
-
-      .portfolio-img-border {
-        width: 308px;
-        height: 166px;
-        border: 4px solid black;
+      .border-arrow {
+        width: 40px;
+        height: 40px;
         position: absolute;
-        top: 20px;
-        left: 10px;
-        animation: show-portfolio-img-border 0.2s linear;
-
-        .border-arrow {
-          width: 40px;
-          height: 40px;
-          position: absolute;
-          right: -24px;
-          top: calc(50% - 20px);
-          animation: rotate-arrow-135deg 0.2s linear;
-        }
-      }
-    }
-
-    .portfolio-info {
-      display: flex;
-      flex-direction: column;
-      font-family: "Overpass", "sans-serif";
-      font-weight: 400;
-      animation: show-portfolio-info 0.2s linear;
-
-      .portfolio-techstack {
-        font-size: 23px;
-        line-height: 27.6px;
-        color: #00bc8f;
-      }
-
-      p {
-        font-size: 16px;
-        line-height: 19.2px;
-      }
-
-      .portfolio-github-button {
-        color: inherit;
-        text-decoration: none;
-        font-size: 23px;
-        line-height: 27.6px;
-        border: 4px solid black;
-        padding: 20px 60px 20px 60px;
-        cursor: pointer;
+        right: -24px;
+        top: calc(50% - 20px);
+        animation: rotate-arrow-135deg 0.2s linear;
       }
     }
   }
 
-  // invert every second element
-  .portfolio:nth-of-type(odd) {
-    .portfolio-counter {
-      text-align: left;
+  .portfolio-info {
+    display: flex;
+    flex-direction: column;
+    font-family: "Overpass", "sans-serif";
+    font-weight: 400;
+    animation: show-portfolio-info 0.2s linear;
+
+    .portfolio-techstack {
+      font-size: 23px;
+      line-height: 27.6px;
+      color: #00bc8f;
     }
 
-    .portfolio-img {
-      justify-content: right;
-
-      .portfolio-img-border {
-        left: unset;
-        right: 10px;
-        animation: show-portfolio-img-border-inverted 0.2s linear;
-
-        .border-arrow {
-          left: -24px;
-        }
-      }
+    p {
+      font-size: 16px;
+      line-height: 19.2px;
     }
 
-    .portfolio-info {
-      align-items: flex-end;
+    .portfolio-github-button {
+      color: inherit;
+      text-decoration: none;
+      font-size: 23px;
+      line-height: 27.6px;
+      border: 4px solid black;
+      padding: 20px 60px 20px 60px;
+      cursor: pointer;
+    }
+  }
+}
 
-      h2 {
-        text-align: right;
-      }
+// invert every second element
+.portfolio:nth-of-type(odd) {
+  .portfolio-counter {
+    text-align: left;
+  }
 
-      .portfolio-github-button {
-        color: inherit;
-        text-decoration: none;
-        font-size: 23px;
-        line-height: 27.6px;
-        border: 4px solid black;
-        padding: 20px 60px 20px 60px;
-        cursor: pointer;
-      }
+  .portfolio-img {
+    justify-content: right;
 
-      p {
-        text-align: right;
+    .portfolio-img-border {
+      left: unset;
+      right: 10px;
+      animation: show-portfolio-img-border-inverted 0.2s linear;
+
+      .border-arrow {
+        left: -24px;
       }
+    }
+  }
+
+  .portfolio-info {
+    align-items: flex-end;
+
+    h2 {
+      text-align: right;
+    }
+
+    .portfolio-github-button {
+      color: inherit;
+      text-decoration: none;
+      font-size: 23px;
+      line-height: 27.6px;
+      border: 4px solid black;
+      padding: 20px 60px 20px 60px;
+      cursor: pointer;
+    }
+
+    p {
+      text-align: right;
     }
   }
 }
@@ -181,5 +193,52 @@
   100% {
     -webkit-filter: unset;
     filter: unset;
+  }
+}
+
+@media (min-width: 768px) {
+  .portfolios {
+    max-width: var(--max-width);
+    width: 100%;
+  }
+
+  .portfolio-intro {
+    max-width: 532px;
+  }
+
+  .portfolio-header {
+    align-items: center !important;
+  }
+
+  .portfolio-content {
+    flex-direction: row !important;
+    gap: 50px;
+  }
+
+  .portfolio-img {
+    display: block !important;
+    width: calc(45vw);
+    max-width: var(--half-max-width);
+    height: fit-content;
+    padding: 0 !important;
+  }
+
+  .project-img {
+    width: inherit !important;
+    max-width: inherit;
+    height: unset !important;
+  }
+
+  .portfolio-img-border {
+    width: calc(45vw - 8px) !important;
+    max-width: calc(var(--half-max-width) - 8px);
+    height: calc(100% - 16px) !important;
+    top: 10px !important;
+  }
+
+  .portfolio:nth-of-type(odd) {
+    .portfolio-content {
+      flex-direction: row-reverse !important;
+    }
   }
 }

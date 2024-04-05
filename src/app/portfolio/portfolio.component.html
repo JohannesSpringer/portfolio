@@ -1,28 +1,35 @@
 <div class="portfolios" id="portfolio">
-    <h1>Portfolio</h1>
-    <div class="portfolio-intro">Explore a selection of my work here - Interact with projects to see my skills in action
+    <div class="portfolio-header">
+        <h1>Portfolio</h1>
+        <div class="portfolio-intro">Explore a selection of my work here - Interact with projects to see my skills in
+            action</div>
     </div>
     <div class="portfolio" *ngFor="let prj of projects; index as i" id="portfolio{{i}}">
         <div class="portfolio-counter">
             {{ ("00" + (i+1)).slice(-2) }}/{{ ("00" + (projects.length)).slice(-2) }}
         </div>
 
-        <div class="portfolio-img" (mouseenter)="prj.hovered=true" (click)="openLink(prj.prjLink)" (touchstart)="prj.hovered=true">
-            <img class="project-img" src="{{ prj.img }}" alt="" [ngClass]="prj.hovered ? 'project-img-hovered' : ''">
-            <div *ngIf="prj.hovered" class="portfolio-img-border">
-                <img class="border-arrow" src="./../../assets/img/portfolio-arrow.png" alt="">
+        <div class="portfolio-content">
+            <div class="portfolio-img" (mouseenter)="prj.hovered=true" (click)="openLink(prj.prjLink)"
+                (touchstart)="prj.hovered=true">
+                <img class="project-img" src="{{ prj.img }}" alt=""
+                    [ngClass]="prj.hovered ? 'project-img-hovered' : ''">
+                <div *ngIf="prj.hovered" class="portfolio-img-border">
+                    <img class="border-arrow" src="./../../assets/img/portfolio-arrow.png" alt="">
+                </div>
+            </div>
+            <div *ngIf="prj.hovered" class="portfolio-info">
+                <h2>{{ prj.name }}</h2>
+                <div class="portfolio-techstack">{{ prj.techStack }}</div>
+                <p>{{ prj.descripption }}</p>
+                <form>
+                    <button type="submit" (click)="openLink(prj.github)" class="portfolio-github-button">
+                        Github
+                    </button>
+                </form>
             </div>
         </div>
-        <div *ngIf="prj.hovered" class="portfolio-info">
-            <h2>{{ prj.name }}</h2>
-            <div class="portfolio-techstack">{{ prj.techStack }}</div>
-            <p>{{ prj.descripption }}</p>
-            <form>
-                <button type="submit" (click)="openLink(prj.github)" class="portfolio-github-button"> 
-                    Github
-                </button>
-            </form>
-        </div>
+
     </div>
 
 </div>

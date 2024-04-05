@@ -1,5 +1,5 @@
 .my-skills {
-  margin: 24px;
+  margin: 25px;
   border: 4px solid black;
   display: flex;
   align-items: center;
@@ -108,5 +108,28 @@
     transition-duration: 800ms;
     color: var(--text-clr-green);
     animation-timing-function: linear;
+  }
+}
+@media (min-width: 768px) {
+  .my-skills {
+    margin-top: 48px;
+  }
+  .my-skills h1 {
+    transform: translateY(-48px);
+  }
+  .my-skills-icons {
+    padding: 0;
+    width: 90% !important;
+    gap: 50px;
+  }
+}
+@media (min-width: 1280px) {
+  .my-skills {
+    max-width: calc(var(--max-width) - 8px);
+  }
+  .my-skills-icons {
+    padding: 0;
+    width: 80% !important;
+    gap: 100px;
   }
 }/*# sourceMappingURL=my-skills.component.css.map */

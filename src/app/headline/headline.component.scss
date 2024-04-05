@@ -50,6 +50,8 @@
 
 @media (min-width: 1280px) {
     .headline {
+        max-width: var(--max-width);
+        
         h1 {
             font-size: 128px;
             line-height: 128px;

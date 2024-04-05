@@ -3,6 +3,8 @@
   --background-clr: #FFFCF3;
   --text-clr-green: #00BC8F;
   --error: #E61C40;
+  --max-width: 1240px;
+  --half-max-width: 620px;
 }
 
 /* You can add global styles to this file, and also import other style files */
@@ -13,6 +15,8 @@ body {
   font-size: 23px;
   font-weight: 400;
   line-height: 27.6px;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -41,6 +45,11 @@ h3 {
   color: var(--text-clr-green);
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 0;
+}
+
 @keyframes change-color-animation {
   30% {
     color: var(--text-clr-green);
@@ -49,12 +58,15 @@ h3 {
     color: var(--text-clr-green);
   }
 }
+@media (min-width: 768px) {
+  h1 {
+    font-size: 78px;
+    line-height: 78px;
+  }
+}
 @media (min-width: 1280px) {
   html {
     display: flex;
     justify-content: center;
-  }
-  body {
-    max-width: 1240px;
   }
 }/*# sourceMappingURL=styles.css.map */

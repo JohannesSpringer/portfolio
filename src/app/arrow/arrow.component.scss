@@ -4,6 +4,7 @@
     display: flex;
     justify-content: flex-end;
     height: 270px;
+    max-width: var(--max-width);
 
     .arrow-left-until-hover {
         display: flex;
@@ -87,5 +88,12 @@
 
     .arrow-left {
         transform: translateX(-50px) !important;
+    }
+}
+
+@media (min-width: 1280px) {
+    .arrow {
+        padding-left: calc(50vw - var(--half-max-width));
+        padding-right: calc(50vw - var(--half-max-width));
     }
 }

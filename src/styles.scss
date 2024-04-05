@@ -6,6 +6,8 @@
     --background-clr: #FFFCF3;
     --text-clr-green: #00BC8F;
     --error: #E61C40;
+    --max-width: 1240px;
+    --half-max-width: 620px;
 }
 
 
@@ -17,6 +19,8 @@ body {
     font-size: 23px;
     font-weight: 400;
     line-height: 27.6px;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -45,6 +49,11 @@ h3 {
     color: var(--text-clr-green);
 }
 
+// --------------- Scrollbar ------------------
+/* width */
+::-webkit-scrollbar {
+    width: 0;
+}
 
 // Global animations
 @keyframes change-color-animation {
@@ -59,13 +68,16 @@ h3 {
 
 
 // Media queries
+@media (min-width: 768px) {
+    h1 {
+        font-size: 78px;
+        line-height: 78px;
+    }
+}
+
 @media (min-width: 1280px) {
     html {
         display: flex;
         justify-content: center;
-    }
-
-    body {
-        max-width: 1240px;
     }
 }
