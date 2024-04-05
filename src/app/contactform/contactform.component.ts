@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -9,6 +9,7 @@ import { NgForm } from '@angular/forms';
 })
 export class ContactformComponent {
   mailTest: boolean = false;
+  buttonValue: string = 'Say hello ;)';
 
   http = inject(HttpClient);
 
@@ -31,6 +32,10 @@ export class ContactformComponent {
       },
     },
   };
+
+  constructor() {
+    this.checkScreenWidth();
+  }
 
   sendMail(ngForm: NgForm) {
     this.checkboxChecked = ngForm.controls['checkboxPrivacyPolicy'].value;
@@ -72,5 +77,18 @@ export class ContactformComponent {
 
   notCheckedAndSubmitted(): boolean {
     return !this.checkboxChecked && this.formSubmitted;
+  }
+
+  checkScreenWidth() {
+    if (window.innerWidth >= 768) {
+      this.buttonValue = 'Send message';
+    } else {
+      this.buttonValue = 'Say hello ;)';
+    }
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.checkScreenWidth();
   }
 }

@@ -1,3 +1,4 @@
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component } from '@angular/core';
 import { SharedService } from '../shared.service';
 
@@ -6,11 +7,32 @@ import { SharedService } from '../shared.service';
   standalone: false,
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss',
-    './../header/header.component.scss']
+    './../header/header.component.scss'],
+  animations: [
+    trigger('hoverAnimation', [
+      state('normal', style({
+        opacity: '0',
+        height: '0px',
+        width: '0',
+        transform: 'translateX(-88px)',
+        backgroundColor: '#00BC8F',
+      })),
+      state('highlighted', style({
+        opacity: '1',
+        height: '2px',
+        width: '55px',
+        backgroundColor: '#00BC8F',
+      })),
+      transition('highlighted <=> normal', [
+        animate('60ms ease-in'),
+      ]),
+    ]),
+  ],
 })
 export class FooterComponent {
   appLinks: any[];
   isClicked: boolean = false;
+  isHovered: boolean = false;
 
   constructor(private sharedService: SharedService) {
     this.appLinks = sharedService.appLinks;
@@ -30,5 +52,13 @@ export class FooterComponent {
 
   scrollToElement(elementId: string, offset: number) {
     this.sharedService.scrollToElement(elementId, offset);
+  }
+
+  setHover() {
+    this.isHovered = true;
+  }
+
+  resetHover() {
+    this.isHovered = false;
   }
 }

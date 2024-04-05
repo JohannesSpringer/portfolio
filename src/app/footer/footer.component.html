@@ -11,12 +11,13 @@
                 <div></div>
                 <span>S</span>]
             </div>
-            <div class="personal-mail">
-                johannes.springer93&#64;gmx.de
+            <div class="copyright">
+                &#169;Johannes Springer 2024
             </div>
         </div>
     </div>
-    <div class="legal-notice">
-        Legal notice
+    <div class="legal-notice" (mouseover)="setHover()" (mouseleave)="resetHover()" (touchstart)="setHover()" (touchend)="resetHover()">
+        <div>Legal notice</div>
+        <div class="underline" [@hoverAnimation]="isHovered ? 'highlighted' : 'normal'"></div>
     </div>
 </div>
