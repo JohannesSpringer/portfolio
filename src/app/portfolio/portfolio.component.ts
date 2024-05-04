@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
 import { SharedService } from '../shared.service';
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
   selector: 'app-portfolio',
@@ -32,7 +33,52 @@ export class PortfolioComponent {
     }
   ];
 
-  constructor(private sharedService: SharedService) {}
+  deviceInfo: any;
+  isMobile: boolean = false;
+
+  constructor(private sharedService: SharedService, private deviceService: DeviceDetectorService) {
+    this.checkDevice();
+  }
+
+  checkDevice() {
+    this.deviceInfo = this.deviceService.getDeviceInfo();
+    this.isMobile = this.deviceService.isMobile();
+    // const isTablet = this.deviceService.isTablet();
+    // const isDesktopDevice = this.deviceService.isDesktop();    
+  }
+
+  /**
+   * Creating Listener for scroll event to check elements visibility in viewport
+   * @param event 
+   */
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll(event: Event) {    
+    if (this.isMobile) this.checkElementPosition();
+  }
+
+  /**
+   * Check visibility for all portfolio projects in viewport and show all information of visible project
+   */
+  checkElementPosition() {
+    for (let i = 0; i < this.projects.length; i++) {
+      const prj = this.projects[i];
+      if (prj.hovered) continue;
+      const element = document.getElementById('portfolio' + i);      
+      if (element) {
+        prj.hovered = this.elementIsVisible(element);
+      }
+    }
+  }
+
+  elementIsVisible(ele: HTMLElement) {
+    const rect = ele.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
 
   openLink(link: string) {
     this.sharedService.openLink(link);
