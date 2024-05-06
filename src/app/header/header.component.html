@@ -16,9 +16,13 @@
             (mouseleave)="resetHover(i)" (mousedown)="onClick(i)"
             (click)="scrollToElement(btn[1], convertStringToNumber(btn[3])); toggleMenu()" (touchstart)="setHover(i)"
             (touchend)="resetHover(i)">
-            <span>{{ btn[0] }}</span>
+            <span i18="@@buttonName">{{ btn[0] }}</span>
             <div class="menu-btn-rect" [@hoverAnimation]="menuButtons[i][2]"></div>
         </div>
+        <div>
+            <button (click)="switchLanguage('de')">Deutsch</button>
+            <button (click)="switchLanguage('en')">English</button>
+          </div>
         <div class="menu-footer">
             <div class="background-change"></div>
             <div class="footer-info">
