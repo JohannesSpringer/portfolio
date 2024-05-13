@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="aboutMe" datatype="html">
+        <source>Über mich</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-me/about-me.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aboutMeDescription" datatype="html">
+        <source>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet ullam dolorem cum ratione nesciunt perferendis consequuntur consequatur eligendi iusto corporis. Porro nemo optio facere voluptatibus qui earum maxime molestiae soluta!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-me/about-me.component.html</context>
+          <context context-type="linenumber">5,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="buttonContact" datatype="html">
+        <source>Lass uns reden</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/about-me/about-me.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contactHeadline" datatype="html">
+        <source>Sag hallo!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contactform/contactform.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contactOpener" datatype="html">
+        <source>Möchten Sie ein neues Projekt besprechen?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contactform/contactform.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="contactP" datatype="html">
+        <source>Say hello! let&apos;s discuss your ideas and make it happen</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contactform/contactform.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="inputName" datatype="html">
+        <source>Your name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contactform/contactform.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="inputNameReq" datatype="html">
+        <source>Your name is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contactform/contactform.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="inputMail" datatype="html">
+        <source>Your email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contactform/contactform.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="inputMailReq" datatype="html">
+        <source>Your email is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contactform/contactform.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="inputMsg" datatype="html">
+        <source>Your message</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contactform/contactform.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="inputMsgReq" datatype="html">
+        <source>Your message is empty</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contactform/contactform.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="privacePolicyCheck" datatype="html">
+        <source>I&apos;ve read the <x id="START_TAG_BUTTON" ctype="x-button" equiv-text="&lt;button&gt;"/>privacy policy<x id="CLOSE_TAG_BUTTON" ctype="x-button" equiv-text="&lt;/button&gt;"/> and agree to the processing of my data as outlined.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contactform/contactform.component.html</context>
+          <context context-type="linenumber">44,45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="privacyPolicyCheckReq" datatype="html">
+        <source>Please accept the privacy policy.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/contactform/contactform.component.html</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="buttonName" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ btn[0] }}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="jobTitle" datatype="html">
+        <source>Frontend Developer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/headline/headline.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="mySkills" datatype="html">
+        <source>My skills</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/my-skills/my-skills.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="portfolioDescription" datatype="html">
+        <source>Explore a selection of my work here - Interact with projects to see my skills in action</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/portfolio/portfolio.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

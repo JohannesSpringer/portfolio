@@ -1,8 +1,7 @@
 <div class="portfolios" id="portfolio">
     <div class="portfolio-header">
         <h1>Portfolio</h1>
-        <div class="portfolio-intro">Explore a selection of my work here - Interact with projects to see my skills in
-            action</div>
+        <div class="portfolio-intro">{{ 'portfolioDescription' | translate }}</div>
     </div>
     <div class="portfolio" *ngFor="let prj of projects; index as i" id="portfolio{{i}}">
         <div class="portfolio-counter">

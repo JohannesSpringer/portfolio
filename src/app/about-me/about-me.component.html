@@ -1,11 +1,9 @@
 <div class="about-me" id="aboutMe">
-    <h1>About me</h1>
+    <h1>{{ 'aboutMe' | translate}}</h1>
     <div class="about-me-content">
         <div class="about-me-text">
-            <p class="about-me-descr">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet ullam dolorem cum
-                ratione nesciunt perferendis consequuntur consequatur eligendi iusto corporis. Porro nemo optio facere
-                voluptatibus qui earum maxime molestiae soluta!</p>
-            <div class="msg-link" (click)="scrollToElement('contactform', 92)">Let's talk</div>
+            <p class="about-me-descr">{{ 'aboutMeDescription' | translate }}</p>
+            <div class="msg-link" (click)="scrollToElement('contactform', 92)">{{ 'buttonContact' | translate }}</div>
         </div>
         <div class="about-me-img" (mouseenter)="setHover()" (mouseleave)="resetHover()" (touchstart)="setHover()"
             (touchend)="resetHover()">

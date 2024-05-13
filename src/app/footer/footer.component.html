@@ -17,7 +17,7 @@
         </div>
     </div>
     <div class="legal-notice" (mouseover)="setHover()" (mouseleave)="resetHover()" (touchstart)="setHover()" (touchend)="resetHover()">
-        <div>Legal notice</div>
+        <div>{{ 'legalNotice' | translate }}</div>
         <div class="underline" [@hoverAnimation]="isHovered ? 'highlighted' : 'normal'"></div>
     </div>
 </div>

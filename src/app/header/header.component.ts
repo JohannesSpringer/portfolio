@@ -259,7 +259,7 @@ export class HeaderComponent {
   constructor(private sharedService: SharedService, private translate: TranslateService) {
     this.appLinks = sharedService.appLinks;
     // Standard-Sprache festlegen
-    translate.setDefaultLang('de');
+    // translate.setDefaultLang('en');
   }
 
   switchLanguage(language: string) {

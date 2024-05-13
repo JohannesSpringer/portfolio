@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, HostListener, inject } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contactform',
@@ -33,7 +34,7 @@ export class ContactformComponent {
     },
   };
 
-  constructor() {
+  constructor(private translate: TranslateService) {
     this.checkScreenWidth();
   }
 
@@ -90,5 +91,9 @@ export class ContactformComponent {
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     this.checkScreenWidth();
+  }
+
+  switchLanguage(language: string) {
+    this.translate.use(language);
   }
 }

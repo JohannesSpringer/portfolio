@@ -5,6 +5,14 @@
             <div></div>
             <span>S</span>]
         </div>
+        <div class="languages">
+            <div class="flag" (click)="switchLanguage('en')">
+                <img src="./../../assets/img/flags/england-2906827_640.png" alt="">
+            </div>
+            <div class="flag" (click)="switchLanguage('de')">
+                <img src="./../../assets/img/flags/germany-31017_640.png" alt="">
+            </div>
+        </div>
         <div class="burger-menu" (click)="toggleMenu()">
             <div [@openClose]="isOpen ? 'open-s1' : 'closed-s1'"></div>
             <div [@openClose]="isOpen ? 'open-s2' : 'closed-s2'"></div>
@@ -16,17 +24,13 @@
             (mouseleave)="resetHover(i)" (mousedown)="onClick(i)"
             (click)="scrollToElement(btn[1], convertStringToNumber(btn[3])); toggleMenu()" (touchstart)="setHover(i)"
             (touchend)="resetHover(i)">
-            <span i18="@@buttonName">{{ btn[0] }}</span>
+            <span i18n="@@buttonName">{{ btn[0] }}</span>
             <div class="menu-btn-rect" [@hoverAnimation]="menuButtons[i][2]"></div>
         </div>
-        <div>
-            <button (click)="switchLanguage('de')">Deutsch</button>
-            <button (click)="switchLanguage('en')">English</button>
-          </div>
         <div class="menu-footer">
             <div class="background-change"></div>
             <div class="footer-info">
-                <h1>Say hi!</h1>
+                <h1>{{ 'footerHeadline' | translate }}</h1>
                 <div class="personal-mail">johannes.springer93&#64;gmx.de</div>
                 <div class="footer-icons">
                     <div class="app-link" *ngFor="let link of appLinks">

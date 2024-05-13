@@ -1,0 +1,49 @@
+{
+  "aboutMe": "Über mich",
+  "aboutMeDescription": "Hab kein Plan!",
+  "buttonContact": "Lass uns reden",
+  "contactHeadline": "Sag hallo!",
+  "contactOpener": "Möchten Sie ein neues Projekt besprechen?",
+  "contactP": "Say hello! let's discuss your ideas and make it happen",
+  "footerHeadline": "Sag Hallo!", 
+  "inputName": "Your name",
+  "inputNameReq": "Your name is required",
+  "inputMail": "Your email",
+  "inputMailReq": "Your email is required",
+  "inputMsg": "Your message",
+  "inputMsgReq": "Your message is empty",
+  "legalNotice": "Legal notice",
+  "privacePolicyCheck": {
+    "_": "I've read the privacy policy and agree to the processing of my data as outlined.",
+    "x": [
+      {
+        "$": {
+          "id": "START_TAG_BUTTON",
+          "ctype": "x-button",
+          "equiv-text": "<button>"
+        }
+      },
+      {
+        "$": {
+          "id": "CLOSE_TAG_BUTTON",
+          "ctype": "x-button",
+          "equiv-text": "</button>"
+        }
+      }
+    ]
+  },
+  "privacyPolicyCheckReq": "Please accept the privacy policy.",
+  "buttonName": {
+    "x": [
+      {
+        "$": {
+          "id": "INTERPOLATION",
+          "equiv-text": "{{ btn[0] }}"
+        }
+      }
+    ]
+  },
+  "jobTitle": "Frontend Developer",
+  "mySkills": "My skills",
+  "portfolioDescription": "Explore a selection of my work here - Interact with projects to see my skills in action"
+}

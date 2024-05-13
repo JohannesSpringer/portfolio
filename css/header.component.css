@@ -132,6 +132,23 @@
   margin-top: 20px;
 }
 
+.languages {
+  display: flex;
+  gap: 8px;
+}
+.languages img {
+  height: 32px;
+}
+
+.flag {
+  height: 32px;
+  cursor: pointer;
+  transition: all 100ms ease-in-out;
+}
+.flag:hover {
+  transform: scale(1.1);
+}
+
 @media (min-width: 550px) {
   .header {
     display: flex;

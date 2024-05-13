@@ -139,6 +139,25 @@
     margin-top: 20px;
 }
 
+.languages {
+    display: flex;
+    gap: 8px;
+
+    img {
+        height: 32px;
+    }
+}
+
+.flag {
+    height: 32px;
+    cursor: pointer;
+    transition: all 100ms ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
 @media (min-width: 550px) {
     .header {
         display: flex;
@@ -149,7 +168,7 @@
         max-width: var(--max-width);
     }
 
-    .menu-buttons > *:nth-last-child(n+2) {
+    .menu-buttons>*:nth-last-child(n+2) {
         max-width: 580px;
     }
 
