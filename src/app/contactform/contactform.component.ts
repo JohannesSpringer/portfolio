@@ -11,6 +11,7 @@ import { TranslateService } from '@ngx-translate/core';
 export class ContactformComponent {
   mailTest: boolean = false;
   buttonValue: string = 'Say hello ;)';
+  currentLanguage: string = 'en';
 
   http = inject(HttpClient);
 
@@ -36,6 +37,8 @@ export class ContactformComponent {
 
   constructor(private translate: TranslateService) {
     this.checkScreenWidth();
+    this.currentLanguage = translate.currentLang;
+    console.log('Test', this.currentLanguage);
   }
 
   sendMail(ngForm: NgForm) {
@@ -93,7 +96,8 @@ export class ContactformComponent {
     this.checkScreenWidth();
   }
 
-  switchLanguage(language: string) {
-    this.translate.use(language);
-  }
+  // switchLanguage(language: string) {
+  //   this.translate.use(language);
+  //   this.currentLanguage = language;
+  // }
 }

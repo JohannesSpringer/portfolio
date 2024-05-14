@@ -2,7 +2,11 @@
     <h1>{{ 'aboutMe' | translate}}</h1>
     <div class="about-me-content">
         <div class="about-me-text">
-            <p class="about-me-descr">{{ 'aboutMeDescription' | translate }}</p>
+            <p class="about-me-descr">{{ 'aboutMeDescription01' | translate }}<br></p>
+            <p class="about-me-descr">{{ 'aboutMeDescription02' | translate }}<br></p>
+            <p class="about-me-descr">{{ 'aboutMeDescription03' | translate }}<br></p>
+            <p class="about-me-descr">{{ 'aboutMeDescription04' | translate }}<br></p>
+            <p class="about-me-descr">{{ 'aboutMeDescription05' | translate }}</p>
             <div class="msg-link" (click)="scrollToElement('contactform', 92)">{{ 'buttonContact' | translate }}</div>
         </div>
         <div class="about-me-img" (mouseenter)="setHover()" (mouseleave)="resetHover()" (touchstart)="setHover()"

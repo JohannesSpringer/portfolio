@@ -19,12 +19,9 @@ import { provideRouter } from '@angular/router';
 import { routes } from './app-routing.module';
 import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-translate/core';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-// export function HttpLoaderFactory(http: HttpClient) {
-//   return new TranslateHttpLoader(http, 'locale/', '.xlf');
-// }
 export function translateHttpLoaderFactory(httpBackend: HttpBackend): TranslateHttpLoader {
   return new TranslateHttpLoader(new HttpClient(httpBackend), './assets/i18n/', '.json');
 }
@@ -61,9 +58,5 @@ export function translateHttpLoaderFactory(httpBackend: HttpBackend): TranslateH
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  constructor(
-    private translate: TranslateService,
-  ) {
-    this.translate.setDefaultLang('en');
-  }
+
 }

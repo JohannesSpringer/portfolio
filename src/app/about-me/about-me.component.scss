@@ -58,14 +58,22 @@
     .about-me-descr {
         padding: 0;
     }
-    
+
+    .about-me-text {
+        gap: 24px;
+    }
+
     .about-me-content {
         display: flex;
         justify-content: space-between;
 
-        > * {
+        >* {
             width: 45%;
         }
+    }
+
+    .about-me-img {
+        max-height: calc(45vw - 25px);
     }
 
     .msg-link {
@@ -83,6 +91,9 @@
 @media (min-width: 1280px) {
     .about-me {
         max-width: var(--max-width);
-        
+    }
+
+    .about-me-img {
+        max-height: 558px;
     }
 }

@@ -255,15 +255,17 @@ export class HeaderComponent {
     ['Portfolio', 'portfolio', 'normal', '92'],
   ];
   appLinks: any[];
+  currentLanguage: string = 'en';
 
   constructor(private sharedService: SharedService, private translate: TranslateService) {
     this.appLinks = sharedService.appLinks;
-    // Standard-Sprache festlegen
-    // translate.setDefaultLang('en');
+    this.translate.setDefaultLang('en');
+    this.currentLanguage = translate.currentLang;
   }
 
   switchLanguage(language: string) {
     this.translate.use(language);
+    this.currentLanguage = language;
   }
 
   toggleMenu() {

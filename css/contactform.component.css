@@ -105,12 +105,17 @@
 }
 .contactform .checkbox-container label button {
   border: none;
-  width: 101px;
   color: var(--text-clr-green);
   background-color: transparent;
 }
 .contactform .checkbox-container label button:hover {
   font-weight: 700;
+}
+.contactform .checkbox-container label button .langen {
+  width: 101px;
+}
+.contactform .checkbox-container label button .langde {
+  width: 201px;
 }
 .contactform .checkbox-container input[type=checkbox] {
   cursor: pointer;

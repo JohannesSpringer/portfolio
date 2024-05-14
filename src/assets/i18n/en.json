@@ -1,6 +1,10 @@
 {
   "aboutMe": "About me",
-  "aboutMeDescription": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet ullam dolorem cum ratione nesciunt perferendis consequuntur consequatur eligendi iusto corporis. Porro nemo optio facere voluptatibus qui earum maxime molestiae soluta!",
+  "aboutMeDescription01": "My journey into the world of software development began during my school years at technical high school, where I took my first steps with HTML, CSS and C++. These early experiences sparked my interest in designing digital solutions and laid the foundation for my further development.",
+  "aboutMeDescription02": "During my studies in mechanical engineering, I expanded my knowledge with a semester's experience in Java. But my true interest in programming was sparked when I started to work intensively with Python. Through self-study and courses on platforms such as Udemy, I acquired a good knowledge of Python, driven by my strong desire to automate processes and find more efficient solutions.",
+  "aboutMeDescription03": "In my professional career as a production developer for digitalization, I was able to delve deeper into the world of software. The need to automate and digitally transform complex processes led me to PLC programming, which I learned with dedication and enthusiasm.",
+  "aboutMeDescription04": "With each new step I took towards software development, my desire to dedicate myself fully to this field grew. My strong interest, coupled with my growing expertise, encouraged me to make the decision to establish myself professionally in software development.",
+  "aboutMeDescription05": "Today I am ready to take on a new challenge as a software developer. With my quick perception, deep understanding of processes and ability to work independently, I am confident that I can make a valuable contribution to your team. I look forward to contributing my knowledge and passion for software development to your company and working together to create innovative solutions.",
   "buttonContact": "Let's talk",
   "contactHeadline": "Say hi!",
   "contactOpener": "Want to discuss a new project?",
@@ -13,25 +17,9 @@
   "inputMsg": "Your message",
   "inputMsgReq": "Your message is empty",
   "legalNotice": "Legal notice",
-  "privacePolicyCheck": {
-    "_": "I've read the privacy policy and agree to the processing of my data as outlined.",
-    "x": [
-      {
-        "$": {
-          "id": "START_TAG_BUTTON",
-          "ctype": "x-button",
-          "equiv-text": "<button>"
-        }
-      },
-      {
-        "$": {
-          "id": "CLOSE_TAG_BUTTON",
-          "ctype": "x-button",
-          "equiv-text": "</button>"
-        }
-      }
-    ]
-  },
+  "privacePolicyCheck01": "I've read the",
+  "privacePolicyCheck02": "privacy policy",
+  "privacePolicyCheck03": "and agree to the processing of my data as outlined.",
   "privacyPolicyCheckReq": "Please accept the privacy policy.",
   "buttonName": {
     "x": [

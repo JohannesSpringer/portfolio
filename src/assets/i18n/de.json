@@ -1,38 +1,26 @@
 {
   "aboutMe": "Über mich",
-  "aboutMeDescription": "Hab kein Plan!",
-  "buttonContact": "Lass uns reden",
-  "contactHeadline": "Sag hallo!",
+  "aboutMeDescription01": "Meine Reise in die Welt der Softwareentwicklung begann während meiner Schulzeit am technischen Gymnasium, wo ich meine ersten Schritte mit HTML, CSS und C++ unternahm. Diese frühen Erfahrungen weckten mein Interesse an der Gestaltung digitaler Lösungen und legten den Grundstein für meine weitere Entwicklung.",
+  "aboutMeDescription02": "Während meines Studiums im Maschinenbau erweiterte ich mein Wissen um eine Semestererfahrung in Java. Doch mein wahrhaftes Interesse an der Programmierung entfachte, als ich begann, mich intensiv mit Python zu beschäftigen. Durch Selbststudium und Kurse auf Plattformen wie Udemy eignete ich mir gute Kenntnisse in Python an, getrieben von meinem starken Wunsch, Abläufe zu automatisieren und effizientere Lösungen zu finden.",
+  "aboutMeDescription03": "In meiner beruflichen Laufbahn als Fertigungsentwickler für Digitalisierung konnte ich tiefer in die Welt der Software eintauchen. Die Notwendigkeit, komplexe Prozesse zu automatisieren und digital zu transformieren, führte mich zur SPS-Programmierung, die ich mit Engagement und Begeisterung erlernte.",
+  "aboutMeDescription04": "Mit jedem neuen Schritt, den ich in Richtung Softwareentwicklung unternahm, wuchs mein Verlangen, mich voll und ganz diesem Bereich zu widmen. Mein starkes Interesse, gepaart mit meiner zunehmenden Expertise, bestärkte mich darin, den Entschluss zu fassen, mich professionell in der Softwareentwicklung zu etablieren.",
+  "aboutMeDescription05": "Heute stehe ich bereit, eine neue Herausforderung als Softwareentwickler anzunehmen. Mit meiner schnellen Auffassungsgabe, meinem tiefen Prozessverständnis und meiner Fähigkeit zur selbstständigen Arbeit bin ich überzeugt, einen wertvollen Beitrag zu Ihrem Team leisten zu können. Ich freue mich darauf, mein Wissen und meine Leidenschaft für Softwareentwicklung in Ihrem Unternehmen einzubringen und gemeinsam innovative Lösungen zu gestalten.",
+  "buttonContact": "Lassen Sie uns reden",
+  "contactHeadline": "Sagen Sie hallo!",
   "contactOpener": "Möchten Sie ein neues Projekt besprechen?",
-  "contactP": "Say hello! let's discuss your ideas and make it happen",
-  "footerHeadline": "Sag Hallo!", 
-  "inputName": "Your name",
-  "inputNameReq": "Your name is required",
-  "inputMail": "Your email",
-  "inputMailReq": "Your email is required",
-  "inputMsg": "Your message",
-  "inputMsgReq": "Your message is empty",
-  "legalNotice": "Legal notice",
-  "privacePolicyCheck": {
-    "_": "I've read the privacy policy and agree to the processing of my data as outlined.",
-    "x": [
-      {
-        "$": {
-          "id": "START_TAG_BUTTON",
-          "ctype": "x-button",
-          "equiv-text": "<button>"
-        }
-      },
-      {
-        "$": {
-          "id": "CLOSE_TAG_BUTTON",
-          "ctype": "x-button",
-          "equiv-text": "</button>"
-        }
-      }
-    ]
-  },
-  "privacyPolicyCheckReq": "Please accept the privacy policy.",
+  "contactP": "Sagen Sie hallo! Lassen Sie uns Ihre Ideen besprechen und verwirklichen",
+  "footerHeadline": "Sagen Sie Hallo!", 
+  "inputName": "Ihr Name",
+  "inputNameReq": "Ihr Name ist erforderlich",
+  "inputMail": "Ihre E-Mail",
+  "inputMailReq": "Ihre E-Mail ist erforderlich",
+  "inputMsg": "Ihre Nachricht",
+  "inputMsgReq": "Ihre Nachricht ist leer",
+  "legalNotice": "Rechtlicher Hinweis",
+  "privacePolicyCheck01": "Ich habe die",
+  "privacePolicyCheck02": "Datenschutzbestimmungen",
+  "privacePolicyCheck03": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+  "privacyPolicyCheckReq": "Bitte akzeptieren Sie die Datenschutzbestimmungen.",
   "buttonName": {
     "x": [
       {
@@ -43,7 +31,7 @@
       }
     ]
   },
-  "jobTitle": "Frontend Developer",
-  "mySkills": "My skills",
-  "portfolioDescription": "Explore a selection of my work here - Interact with projects to see my skills in action"
+  "jobTitle": "Frontend-Entwickler",
+  "mySkills": "Meine Fähigkeiten",
+  "portfolioDescription": "Entdecken Sie hier eine Auswahl meiner Arbeiten - Interagieren Sie mit Projekten, um meine Fähigkeiten in Aktion zu sehen"
 }
