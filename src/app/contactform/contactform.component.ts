@@ -11,9 +11,8 @@ import { LanguageService } from '../language.service';
 export class ContactformComponent {
   mailTest: boolean = false;
   buttonValue: string = 'Say hello ;)';
+  
   languageService = inject(LanguageService);
-
-
   http = inject(HttpClient);
 
   contactData = {
@@ -84,9 +83,14 @@ export class ContactformComponent {
 
   checkScreenWidth() {
     if (window.innerWidth >= 768) {
-      this.buttonValue = 'Send message';
+      this.languageService.translate.get('sendMessage').subscribe((res: string) => {
+        this.buttonValue = res;
+      })
     } else {
-      this.buttonValue = 'Say hello ;)';
+      // this.buttonValue = 'Say hello ;)';
+      this.languageService.translate.get('sayHello').subscribe((res: string) => {
+        this.buttonValue = res;
+      })
     }
   }
 

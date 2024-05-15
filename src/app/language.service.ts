@@ -8,7 +8,7 @@ export class LanguageService {
 
   currentLanguage: string = 'en';
 
-  constructor(private translate: TranslateService) { 
+  constructor(public translate: TranslateService) { 
     translate.setDefaultLang('en');
     translate.use('en');
     this.currentLanguage = translate.currentLang;
