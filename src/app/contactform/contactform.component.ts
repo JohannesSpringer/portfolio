@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, HostListener, inject } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { TranslateService } from '@ngx-translate/core';
+import { LanguageService } from '../language.service';
 
 @Component({
   selector: 'app-contactform',
@@ -11,7 +11,8 @@ import { TranslateService } from '@ngx-translate/core';
 export class ContactformComponent {
   mailTest: boolean = false;
   buttonValue: string = 'Say hello ;)';
-  currentLanguage: string = 'en';
+  languageService = inject(LanguageService);
+
 
   http = inject(HttpClient);
 
@@ -35,10 +36,8 @@ export class ContactformComponent {
     },
   };
 
-  constructor(private translate: TranslateService) {
+  constructor() {
     this.checkScreenWidth();
-    this.currentLanguage = translate.currentLang;
-    console.log('Test', this.currentLanguage);
   }
 
   sendMail(ngForm: NgForm) {
@@ -95,9 +94,4 @@ export class ContactformComponent {
   onResize(event: any) {
     this.checkScreenWidth();
   }
-
-  // switchLanguage(language: string) {
-  //   this.translate.use(language);
-  //   this.currentLanguage = language;
-  // }
 }

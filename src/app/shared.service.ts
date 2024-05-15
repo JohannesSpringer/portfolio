@@ -23,7 +23,8 @@ export class SharedService {
     },
   ];
 
-  constructor() { }
+  constructor() { 
+  }
 
   openLink(link: string) {
     window.open(link, '_blank');
@@ -35,7 +36,6 @@ export class SharedService {
       const topOffset = element.offsetTop - offset;
       window.scrollTo({ top: topOffset, behavior: 'auto'});
     }
-    console.log("Scrollen ausgeführt.");
-    
+    console.log("Scrollen ausgeführt."); 
   }
 }

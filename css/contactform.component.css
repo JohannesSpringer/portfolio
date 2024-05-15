@@ -111,11 +111,11 @@
 .contactform .checkbox-container label button:hover {
   font-weight: 700;
 }
-.contactform .checkbox-container label button .langen {
+.contactform .checkbox-container label .langen {
   width: 101px;
 }
-.contactform .checkbox-container label button .langde {
-  width: 201px;
+.contactform .checkbox-container label .langde {
+  width: 182px;
 }
 .contactform .checkbox-container input[type=checkbox] {
   cursor: pointer;

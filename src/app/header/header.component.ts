@@ -1,7 +1,7 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { SharedService } from '../shared.service';
-import { TranslateService } from '@ngx-translate/core';
+import { LanguageService } from '../language.service';
 
 @Component({
   selector: 'app-header',
@@ -255,17 +255,14 @@ export class HeaderComponent {
     ['Portfolio', 'portfolio', 'normal', '92'],
   ];
   appLinks: any[];
-  currentLanguage: string = 'en';
+  languageService = inject(LanguageService);
 
-  constructor(private sharedService: SharedService, private translate: TranslateService) {
-    this.appLinks = sharedService.appLinks;
-    this.translate.setDefaultLang('en');
-    this.currentLanguage = translate.currentLang;
+  constructor(private sharedService: SharedService) {
+    this.appLinks = sharedService.appLinks;   
   }
 
   switchLanguage(language: string) {
-    this.translate.use(language);
-    this.currentLanguage = language;
+    this.languageService.switchLanguage(language);
   }
 
   toggleMenu() {
