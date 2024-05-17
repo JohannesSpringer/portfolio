@@ -10,7 +10,6 @@ import { LanguageService } from '../language.service';
 })
 export class ContactformComponent {
   mailTest: boolean = false;
-  buttonValue: string = 'Say hello ;)';
   
   languageService = inject(LanguageService);
   http = inject(HttpClient);
@@ -36,7 +35,7 @@ export class ContactformComponent {
   };
 
   constructor() {
-    this.checkScreenWidth();
+    // this.checkScreenWidth();
   }
 
   sendMail(ngForm: NgForm) {
@@ -81,21 +80,21 @@ export class ContactformComponent {
     return !this.checkboxChecked && this.formSubmitted;
   }
 
-  checkScreenWidth() {
-    if (window.innerWidth >= 768) {
-      this.languageService.translate.get('sendMessage').subscribe((res: string) => {
-        this.buttonValue = res;
-      })
-    } else {
-      // this.buttonValue = 'Say hello ;)';
-      this.languageService.translate.get('sayHello').subscribe((res: string) => {
-        this.buttonValue = res;
-      })
-    }
-  }
+  // checkScreenWidth() {
+  //   if (window.innerWidth >= 768) {
+  //     this.languageService.translate.get('sendMessage').subscribe((res: string) => {
+  //       this.buttonValue = res;
+  //     })
+  //   } else {
+  //     // this.buttonValue = 'Say hello ;)';
+  //     this.languageService.translate.get('sayHello').subscribe((res: string) => {
+  //       this.buttonValue = res;
+  //     })
+  //   }
+  // }
 
-  @HostListener('window:resize', ['$event'])
-  onResize(event: any) {
-    this.checkScreenWidth();
-  }
+  // @HostListener('window:resize', ['$event'])
+  // onResize(event: any) {
+  //   this.checkScreenWidth();
+  // }
 }

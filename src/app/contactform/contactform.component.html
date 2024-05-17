@@ -49,6 +49,6 @@
         </div>
         <span [ngStyle]="{ 'opacity': notCheckedAndSubmitted() ? 1 : 0 }" class="privacy-policy-missing">{{ 'privacyPolicyCheckReq' | translate }}</span>
 
-        <input type="submit" [value]="buttonValue" [ngClass]="checkboxChecked ? 'opacity-1' : '' ">
+        <input type="submit" [value]="languageService.buttonValue" [ngClass]="checkboxChecked ? 'opacity-1' : '' ">
     </form>
 </div>
