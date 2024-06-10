@@ -1,0 +1,37 @@
+.legal-notice {
+    margin: 24px;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .legal-notice {
+        margin: 8px;
+        max-width: calc(100vw - 24px);
+    }
+
+    h1 {
+        font-size: 24px;
+        line-height: 24px;
+    }
+
+    h2 {
+        font-size: 24px;
+        line-height: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    ul {
+        font-size: 16px;
+        line-height: 16px;
+    }
+}

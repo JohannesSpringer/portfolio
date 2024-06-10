@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
 import { HeaderComponent } from './header/header.component';
 import { HeadlineComponent } from './headline/headline.component';
 import { ContactLinkComponent } from './contact-link/contact-link.component';
@@ -17,10 +18,11 @@ import { ContactformComponent } from './contactform/contactform.component';
 import { HttpBackend, provideHttpClient } from '@angular/common/http';
 import { provideRouter } from '@angular/router';
 import { routes } from './app-routing.module';
-import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { FooterComponent } from './footer/footer.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 export function translateHttpLoaderFactory(httpBackend: HttpBackend): TranslateHttpLoader {
   return new TranslateHttpLoader(new HttpClient(httpBackend), './assets/i18n/', '.json');
@@ -29,6 +31,7 @@ export function translateHttpLoaderFactory(httpBackend: HttpBackend): TranslateH
 @NgModule({
   declarations: [
     AppComponent,
+    LegalNoticeComponent,
     HeaderComponent,
     HeadlineComponent,
     ContactLinkComponent,
@@ -38,6 +41,7 @@ export function translateHttpLoaderFactory(httpBackend: HttpBackend): TranslateH
     PortfolioComponent,
     ContactformComponent,
     FooterComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +58,7 @@ export function translateHttpLoaderFactory(httpBackend: HttpBackend): TranslateH
       }
     })
   ],
-  providers: [provideRouter(routes), provideHttpClient()],
+  providers: [provideHttpClient()],
   bootstrap: [AppComponent]
 })
 export class AppModule {

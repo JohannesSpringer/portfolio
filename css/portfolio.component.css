@@ -91,6 +91,10 @@
   cursor: pointer;
 }
 
+.d-none {
+  display: none;
+}
+
 .portfolio:nth-of-type(odd) .portfolio-counter {
   text-align: left;
 }

@@ -1,6 +1,8 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component } from '@angular/core';
 import { SharedService } from '../shared.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-footer',
@@ -34,7 +36,7 @@ export class FooterComponent {
   isClicked: boolean = false;
   isHovered: boolean = false;
 
-  constructor(private sharedService: SharedService) {
+  constructor(private sharedService: SharedService, private router: Router) {
     this.appLinks = sharedService.appLinks;
   }
 
@@ -60,5 +62,10 @@ export class FooterComponent {
 
   resetHover() {
     this.isHovered = false;
+  }
+
+  navigateToLegalNotice() {
+    console.log("gehe zu legal notice");
+    this.router.navigate(['/legal-notice']);
   }
 }
