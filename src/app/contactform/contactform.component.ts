@@ -80,21 +80,7 @@ export class ContactformComponent {
     return !this.checkboxChecked && this.formSubmitted;
   }
 
-  // checkScreenWidth() {
-  //   if (window.innerWidth >= 768) {
-  //     this.languageService.translate.get('sendMessage').subscribe((res: string) => {
-  //       this.buttonValue = res;
-  //     })
-  //   } else {
-  //     // this.buttonValue = 'Say hello ;)';
-  //     this.languageService.translate.get('sayHello').subscribe((res: string) => {
-  //       this.buttonValue = res;
-  //     })
-  //   }
-  // }
-
-  // @HostListener('window:resize', ['$event'])
-  // onResize(event: any) {
-  //   this.checkScreenWidth();
-  // }
+  onResize(event: any) {
+    this.languageService.onResize(event);
+  }
 }

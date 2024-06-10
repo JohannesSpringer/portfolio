@@ -12,7 +12,7 @@ import { SharedService } from '../shared.service';
     trigger('hoverAnimation', [
       state('normal', style({
         opacity: '0',
-        height: '0px',
+        height: '2px',
         width: '0',
         transform: 'translateX(-88px)',
         backgroundColor: '#00BC8F',

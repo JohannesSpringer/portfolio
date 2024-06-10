@@ -4,7 +4,7 @@
     <h3>{{ 'contactOpener' | translate }}</h3>
     <p>{{ 'contactP' | translate }}</p>
 
-    <form (ngSubmit)="sendMail(contactForm)" #contactForm="ngForm">
+    <form (ngSubmit)="sendMail(contactForm)" #contactForm="ngForm" (window:resize)="onResize($event)">
 
         <div class="input-container">
             <label [class.show-label]="inputFocused[0]" for="name">{{ 'inputName' | translate }}</label>
