@@ -20,7 +20,8 @@
             <div *ngIf="prj.hovered" class="portfolio-info">
                 <h2>{{ prj.name }}</h2>
                 <div class="portfolio-techstack">{{ prj.techStack }}</div>
-                <p>{{ prj.descripption }}</p>
+                <p [ngClass]="languageService.currentLanguage == 'de' ? '' : 'd-none'">{{ prj.descriptionDe }}</p>
+                <p [ngClass]="languageService.currentLanguage == 'en' ? '' : 'd-none'">{{ prj.descriptionEn }}</p>
                 <form>
                     <button type="submit" (click)="openLink(prj.github)" class="portfolio-github-button">
                         Github
