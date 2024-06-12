@@ -36,6 +36,5 @@ export class SharedService {
       const topOffset = element.offsetTop - offset;
       window.scrollTo({ top: topOffset, behavior: 'auto'});
     }
-    console.log("Scrollen ausgeführt."); 
   }
 }

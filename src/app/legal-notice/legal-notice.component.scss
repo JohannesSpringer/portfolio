@@ -1,7 +1,66 @@
 .legal-notice {
-    margin: 24px;
+    padding: 24px;
     overflow-x: hidden;
-    width: calc(100vw - 8px);
+    width: calc(100vw - 48px);
+    max-width: 1200px;
+    font-family: 'Overpass';
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 48px;
+    font-family: 'Overpass';
+}
+
+h2 {
+    font-size: 40px;
+    line-height: 40px;
+    font-family: 'Overpass';
+}
+
+h3 {
+    font-size: 32px;
+    line-height: 32px;
+    font-family: 'Overpass';
+}
+
+h4 {
+    font-size: 24px;
+    line-height: 24px;
+    font-family: 'Overpass';
+}
+
+p {
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.body-component {
+    display: flex;
+    justify-content: center;
+}
+
+.page-back {
+    position: fixed;
+    top: 32px;
+    right: 32px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 100%;
+    background-color: var(--background-clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 32px;
+        scale: -1;
+
+        &:hover {
+            filter: invert(76%) sepia(50%) saturate(6708%) hue-rotate(127deg) brightness(92%) contrast(101%);
+        }
+    }
 }
 
 @media (max-width: 768px) {

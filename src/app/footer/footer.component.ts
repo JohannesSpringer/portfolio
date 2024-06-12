@@ -65,7 +65,7 @@ export class FooterComponent {
   }
 
   navigateToLegalNotice() {
-    console.log("gehe zu legal notice");
     this.router.navigate(['/legal-notice']);
+    window.scrollTo(0, 0);
   }
 }

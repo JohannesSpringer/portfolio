@@ -253,6 +253,7 @@ export class HeaderComponent {
     ['About me', 'aboutMe', 'normal', '92'],
     ['My skills', 'mySkills', 'normal', '120'],
     ['Portfolio', 'portfolio', 'normal', '92'],
+    ['Contact', 'contactform', 'normal', '150'],
   ];
   appLinks: any[];
   languageService = inject(LanguageService);
