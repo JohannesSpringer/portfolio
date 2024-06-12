@@ -1,13 +1,13 @@
 .legal-notice {
     margin: 24px;
     overflow-x: hidden;
-    width: 100%;
+    width: calc(100vw - 8px);
 }
 
 @media (max-width: 768px) {
     .legal-notice {
-        margin: 8px;
-        max-width: calc(100vw - 24px);
+        margin: 0px;
+        // max-width: calc(100vw - 24px);
     }
 
     h1 {
