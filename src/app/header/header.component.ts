@@ -250,10 +250,10 @@ import { LanguageService } from '../language.service';
 export class HeaderComponent {
   isOpen: boolean = false;
   menuButtons = [
-    ['About me', 'aboutMe', 'normal', '92'],
-    ['My skills', 'mySkills', 'normal', '120'],
-    ['Portfolio', 'portfolio', 'normal', '92'],
-    ['Contact', 'contactform', 'normal', '150'],
+    ['About me', 'Über mich', 'aboutMe', 'normal', '92'],
+    ['My skills', 'Meine Fähigkeiten', 'mySkills', 'normal', '120'],
+    ['Portfolio', 'Portfolio', 'portfolio', 'normal', '92'],
+    ['Contact', 'Kontakt', 'contactform', 'normal', '150'],
   ];
   appLinks: any[];
   languageService = inject(LanguageService);
