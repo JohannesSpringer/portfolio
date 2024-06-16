@@ -35,6 +35,11 @@ p {
   line-height: 16px;
 }
 
+ul {
+  font-size: 16px;
+  line-height: 16px;
+}
+
 .body-component {
   display: flex;
   justify-content: center;
@@ -84,5 +89,10 @@ p {
   ul {
     font-size: 16px;
     line-height: 16px;
+  }
+}
+@media (min-width: 1200px) {
+  .page-back {
+    right: calc(32px + 50vw - 600px);
   }
 }/*# sourceMappingURL=legal-notice.component.css.map */
