@@ -106,7 +106,7 @@
   "ln65": "Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten so genannte Google Fonts, die von Google bereitgestellt werden. Die Google Fonts sind lokal installiert. Eine Verbindung zu Servern von Google findet dabei nicht statt.",
   "ln66": "Weitere Informationen zu Google Fonts finden Sie unter ",
   "ln67": " und in der Datenschutzerklärung von Google:",
-  "ln68": "",
-  "ln69": "",
-  "ln70": ""
+  "contactFormUxWait": "Nachricht wird gesendet, bitte warten.",
+  "contactFormUxSuccess": "Nachricht wurde erfolgreich gesendet.",
+  "contactFormUxError": "Nachricht konnte nicht gesendet werden"
 }

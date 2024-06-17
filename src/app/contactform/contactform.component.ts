@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, HostListener, inject } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { LanguageService } from '../language.service';
+import { style } from '@angular/animations';
 
 @Component({
   selector: 'app-contactform',
@@ -10,7 +11,7 @@ import { LanguageService } from '../language.service';
 })
 export class ContactformComponent {
   mailTest: boolean = false;
-  
+
   languageService = inject(LanguageService);
   http = inject(HttpClient);
 
@@ -23,6 +24,12 @@ export class ContactformComponent {
   formSubmitted: boolean = false;
   checkboxChecked: boolean = false;
 
+  uxIds = [
+    'uxWait',
+    'uxError',
+    'uxSuccess'
+  ];
+
   post = {
     endPoint: 'https://johannes-springer.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
@@ -34,9 +41,7 @@ export class ContactformComponent {
     },
   };
 
-  constructor() {
-    // this.checkScreenWidth();
-  }
+  constructor() { }
 
   sendMail(ngForm: NgForm) {
     this.checkboxChecked = ngForm.controls['checkboxPrivacyPolicy'].value;
@@ -45,21 +50,32 @@ export class ContactformComponent {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
+            document.getElementById(this.uxIds[0])?.classList.remove('d-none');
+          },
+          error: (error) => {
+            document.getElementById(this.uxIds[0])?.classList.add('d-none');
+            document.getElementById(this.uxIds[1])?.classList.remove('d-none');
+            console.error(error);
             setTimeout(() => {
               ngForm.resetForm();
               this.formSubmitted = false;
+              document.getElementById(this.uxIds[1])?.classList.add('d-none');
             }, 5000);
           },
-          error: (error) => {
-            console.error(error);
-          },
           complete: () => {
+            document.getElementById(this.uxIds[0])?.classList.add('d-none');
+            document.getElementById(this.uxIds[2])?.classList.remove('d-none');
             console.info('send post complete');
+            setTimeout(() => {
+              ngForm.resetForm();
+              this.formSubmitted = false;
+              document.getElementById(this.uxIds[2])?.classList.add('d-none');
+
+            }, 2000);
           },
 
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.checkboxChecked && this.mailTest) {
-      // ngForm.resetForm();
       console.log("Test Mail success");
       setTimeout(() => {
         ngForm.resetForm();

@@ -22,7 +22,7 @@
     <div class="menu-buttons" [@openClose]="isOpen ? 'menu-button-opened' : 'menu-button-closed'">
         <div *ngFor="let btn of menuButtons, index as i" class="menu-btn" (mouseenter)="setHover(i)"
             (mouseleave)="resetHover(i)" (mousedown)="onClick(i)"
-            (click)="scrollToElement(btn[1], convertStringToNumber(btn[3])); toggleMenu()" (touchstart)="setHover(i)"
+            (click)="scrollToElement(btn[2], convertStringToNumber(btn[4])); toggleMenu()" (touchstart)="setHover(i)"
             (touchend)="resetHover(i)">
             <span [innerHTML]="languageService.currentLanguage == 'en' ?  btn[0] : btn[1]">{{ btn[0] }}</span>
             <div class="menu-btn-rect" [@hoverAnimation]="menuButtons[i][3]"></div>

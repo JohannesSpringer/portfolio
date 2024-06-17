@@ -19,8 +19,9 @@
         <div class="input-container">
             <label [class.show-label]="inputFocused[1]" for="email">{{ 'inputMail' | translate }}</label>
             <input #email="ngModel" [ngClass]="{'thin-border' : formSubmitted}" [(ngModel)]="contactData.email"
-                type="email" id="email" name="email" placeholder="{{ 'inputMail' | translate }}" (focus)="onInputFocus(1)"
-                (blur)="onInputBlur(1)" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                type="email" id="email" name="email" placeholder="{{ 'inputMail' | translate }}"
+                (focus)="onInputFocus(1)" (blur)="onInputBlur(1)" required
+                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
             <img *ngIf="!email.valid && formSubmitted" src="./../../assets/img/error.png" srcset="">
             <img *ngIf="email.valid && formSubmitted" src="./../../assets/img/success.png" srcset="">
             <span *ngIf="!email.valid && formSubmitted">{{ 'inputMailReq' | translate }}</span>
@@ -38,17 +39,31 @@
 
         <div class="checkbox-container">
             <div class="checkbox-hover-circle"></div>
-            <input [(ngModel)]="checkboxChecked" type="checkbox" id="checkboxPrivacyPolicy" name="checkboxPrivacyPolicy">
+            <input [(ngModel)]="checkboxChecked" type="checkbox" id="checkboxPrivacyPolicy"
+                name="checkboxPrivacyPolicy">
             <label for="checkboxPrivacyPolicy">
                 <span>
-                    {{ 'privacePolicyCheck01' | translate }} 
-                    <button [ngClass]="{ 'langen' : languageService.currentLanguage == 'en', 'langde' : languageService.currentLanguage == 'de' }">{{ 'privacePolicyCheck02' | translate }}</button>
-                    {{ 'privacePolicyCheck03' | translate }} 
+                    {{ 'privacePolicyCheck01' | translate }}
+                    <button
+                        [ngClass]="{ 'langen' : languageService.currentLanguage == 'en', 'langde' : languageService.currentLanguage == 'de' }">{{
+                        'privacePolicyCheck02' | translate }}</button>
+                    {{ 'privacePolicyCheck03' | translate }}
                 </span>
             </label>
         </div>
-        <span [ngStyle]="{ 'opacity': notCheckedAndSubmitted() ? 1 : 0 }" class="privacy-policy-missing">{{ 'privacyPolicyCheckReq' | translate }}</span>
+        <span [ngStyle]="{ 'opacity': notCheckedAndSubmitted() ? 1 : 0 }" class="privacy-policy-missing">{{
+            'privacyPolicyCheckReq' | translate }}</span>
 
         <input type="submit" [value]="languageService.buttonValue" [ngClass]="checkboxChecked ? 'opacity-1' : '' ">
     </form>
+
+    <div class="contactform-ux d-none" id={{uxIds[0]}}>
+        {{ 'contactFormUxWait' | translate }}
+    </div>
+    <div class="contactform-ux d-none" id={{uxIds[2]}}>
+        {{ 'contactFormUxSuccess' | translate }}
+    </div>
+    <div class="contactform-ux d-none" id={{uxIds[1]}}>
+        {{ 'contactFormUxError' | translate }}
+    </div>
 </div>

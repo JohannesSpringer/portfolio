@@ -22,13 +22,11 @@ export class LanguageService {
   }
 
   checkScreenWidth() {
-    console.log("Bildschirmbreite: ", window.innerWidth);
     if (window.innerWidth >= 768) {
       this.translate.get('sendMessage').subscribe((res: string) => {
         this.buttonValue = res;
       })
     } else {
-      // this.buttonValue = 'Say hello ;)';
       this.translate.get('sayHello').subscribe((res: string) => {
         this.buttonValue = res;
       })
@@ -37,7 +35,6 @@ export class LanguageService {
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
-    console.log(event.target.innerWidth);
     this.checkScreenWidth();
   }
 }

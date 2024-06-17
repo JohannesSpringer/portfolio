@@ -106,7 +106,7 @@
   "ln65": "This site uses so-called Google Fonts, which are provided by Google, for the uniform display of fonts. Google Fonts are installed locally. There is no connection to Google servers.",
   "ln66": "You can find more information about Google Fonts at ",
   "ln67": " and in Google's privacy policy:",
-  "ln68": "",
-  "ln69": "",
-  "ln70": ""
+  "contactFormUxWait": "Message is being sent, please wait.",
+  "contactFormUxSuccess": "Message was sent successfully.",
+  "contactFormUxError": "Message could not be sent."
 }
