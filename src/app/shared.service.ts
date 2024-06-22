@@ -31,8 +31,11 @@ export class SharedService {
   }
 
   scrollToElement(elementId: string, offset: number) {
+    console.log(elementId);
     const element = document.getElementById(elementId);
+    console.log("Element: ", element);
     if (element) {
+      console.log("Starte scrollen.")
       const topOffset = element.offsetTop - offset;
       window.scrollTo({ top: topOffset, behavior: 'auto'});
     }

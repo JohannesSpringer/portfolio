@@ -276,15 +276,15 @@ export class HeaderComponent {
   }
 
   setHover(id: number) {
-    this.menuButtons[id][2] = 'highlighted';
+    this.menuButtons[id][3] = 'highlighted';
   }
 
   resetHover(id: number) {
-    this.menuButtons[id][2] = 'normal';
+    this.menuButtons[id][3] = 'normal';
   }
 
   onClick(id: number) {
-    this.menuButtons[id][2] = 'clicked';
+    this.menuButtons[id][3] = 'clicked';
   }
 
   openLink(link: string) {
