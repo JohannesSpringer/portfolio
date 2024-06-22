@@ -252,8 +252,7 @@ export class HeaderComponent {
   menuButtons = [
     ['About me', 'Über mich', 'aboutMe', 'normal', '92'],
     ['My skills', 'Meine Fähigkeiten', 'mySkills', 'normal', '120'],
-    ['Portfolio', 'Portfolio', 'portfolio', 'normal', '92'],
-    ['Contact', 'Kontakt', 'contactform', 'normal', '150'],
+    ['Portfolio', 'Portfolio', 'portfolio', 'normal', '92']
   ];
   appLinks: any[];
   languageService = inject(LanguageService);

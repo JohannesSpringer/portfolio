@@ -188,6 +188,8 @@ h1 {
   animation-timing-function: ease-in-out;
   text-align: left;
   margin-top: 0;
+  font-size: 40px;
+  line-height: 40px;
 }
 
 .contactform-ux {
@@ -228,6 +230,8 @@ h1 {
   }
   .contactform h1 {
     padding-left: 20px;
+    font-size: 45px;
+    line-height: 45px;
   }
   input[type=submit] {
     width: 277px !important;

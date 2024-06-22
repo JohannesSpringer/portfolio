@@ -15,6 +15,7 @@
   width: fit-content;
   padding: 8px;
   margin: 0;
+  overflow-wrap: anywhere;
 }
 .my-skills .my-skills-icons {
   display: flex;
