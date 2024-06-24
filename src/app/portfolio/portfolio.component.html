@@ -22,9 +22,12 @@
                 <div class="portfolio-techstack">{{ prj.techStack }}</div>
                 <p [ngClass]="languageService.currentLanguage == 'de' ? '' : 'd-none'">{{ prj.descriptionDe }}</p>
                 <p [ngClass]="languageService.currentLanguage == 'en' ? '' : 'd-none'">{{ prj.descriptionEn }}</p>
-                <form>
+                <form class="portfolio-buttons">
                     <button type="submit" (click)="openLink(prj.github)" class="portfolio-github-button">
                         Github
+                    </button>
+                    <button type="submit" (click)="openLink(prj.prjLink)" class="portfolio-github-button">
+                        {{ 'portfolioTryButton' | translate }}
                     </button>
                 </form>
             </div>
