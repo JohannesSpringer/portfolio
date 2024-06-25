@@ -9,32 +9,32 @@
         <div class="input-container">
             <label [class.show-label]="inputFocused[0]" for="name">{{ 'inputName' | translate }}</label>
             <input #name="ngModel" [ngClass]="{'thin-border' : formSubmitted}" [(ngModel)]="contactData.name"
-                type="text" id="name" name="name" (focus)="onInputFocus(0)" (blur)="onInputBlur(0)"
+                type="text" id="name" name="name" (focus)="onInputFocus(0)" (blur)="onInputBlur(0)" (keyup)="onInputChange(0)"
                 placeholder="{{ 'inputName' | translate }}" required>
-            <img *ngIf="!name.valid && formSubmitted" src="./../../assets/img/error.png" srcset="">
-            <img *ngIf="name.valid && formSubmitted" src="./../../assets/img/success.png" srcset="">
-            <span *ngIf="!name.valid && formSubmitted">{{ 'inputNameReq' | translate }}</span>
+            <img *ngIf="!name.valid && inputChanged[0] || !name.valid && formSubmitted" src="./../../assets/img/error.png" srcset="">
+            <img *ngIf="name.valid && inputChanged[0] || name.valid && formSubmitted" src="./../../assets/img/success.png" srcset="">
+            <span *ngIf="!name.valid && inputChanged[0] || !name.valid && formSubmitted">{{ 'inputNameReq' | translate }}</span>
         </div>
 
         <div class="input-container">
             <label [class.show-label]="inputFocused[1]" for="email">{{ 'inputMail' | translate }}</label>
             <input #email="ngModel" [ngClass]="{'thin-border' : formSubmitted}" [(ngModel)]="contactData.email"
                 type="email" id="email" name="email" placeholder="{{ 'inputMail' | translate }}"
-                (focus)="onInputFocus(1)" (blur)="onInputBlur(1)" required
+                (focus)="onInputFocus(1)" (blur)="onInputBlur(1)" (keyup)="onInputChange(1)" required
                 pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
-            <img *ngIf="!email.valid && formSubmitted" src="./../../assets/img/error.png" srcset="">
-            <img *ngIf="email.valid && formSubmitted" src="./../../assets/img/success.png" srcset="">
-            <span *ngIf="!email.valid && formSubmitted">{{ 'inputMailReq' | translate }}</span>
+            <img *ngIf="!email.valid && inputChanged[1] || !email.valid && formSubmitted" src="./../../assets/img/error.png" srcset="">
+            <img *ngIf="email.valid && inputChanged[1] || email.valid && formSubmitted" src="./../../assets/img/success.png" srcset="">
+            <span *ngIf="!email.valid && inputChanged[1] || !email.valid && formSubmitted">{{ 'inputMailReq' | translate }}</span>
         </div>
 
         <div class="input-container">
             <label [class.show-label]="inputFocused[2]" for="message">{{ 'inputMsg' | translate }}</label>
             <textarea #message="ngModel" [ngClass]="{'thin-border' : formSubmitted}" [(ngModel)]="contactData.message"
-                id="message" name="message" minlength="4" (focus)="onInputFocus(2)" (blur)="onInputBlur(2)"
+                id="message" name="message" minlength="4" (focus)="onInputFocus(2)" (blur)="onInputBlur(2)" (keyup)="onInputChange(2)"
                 placeholder="{{ 'inputMsg' | translate }}" required></textarea>
-            <img *ngIf="!message.valid && formSubmitted" src="./../../assets/img/error.png" srcset="">
-            <img *ngIf="message.valid && formSubmitted" src="./../../assets/img/success.png" srcset="">
-            <span *ngIf="!message.valid && formSubmitted">{{ 'inputMsgReq' | translate }}</span>
+            <img *ngIf="!message.valid && inputChanged[2] || !message.valid && formSubmitted" src="./../../assets/img/error.png" srcset="">
+            <img *ngIf="message.valid && inputChanged[2] || message.valid && formSubmitted" src="./../../assets/img/success.png" srcset="">
+            <span *ngIf="!message.valid && inputChanged[2] || !message.valid && formSubmitted">{{ 'inputMsgReq' | translate }}</span>
         </div>
 
         <div class="checkbox-container">

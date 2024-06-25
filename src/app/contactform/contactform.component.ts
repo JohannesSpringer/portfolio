@@ -21,6 +21,7 @@ export class ContactformComponent {
     message: "",
   };
   inputFocused: boolean[] = [false, false, false];
+  inputChanged: boolean[] = [false, false, false];
   formSubmitted: boolean = false;
   checkboxChecked: boolean = false;
 
@@ -55,7 +56,6 @@ export class ContactformComponent {
           error: (error) => {
             document.getElementById(this.uxIds[0])?.classList.add('d-none');
             document.getElementById(this.uxIds[1])?.classList.remove('d-none');
-            console.error(error);
             setTimeout(() => {
               ngForm.resetForm();
               this.formSubmitted = false;
@@ -65,7 +65,6 @@ export class ContactformComponent {
           complete: () => {
             document.getElementById(this.uxIds[0])?.classList.add('d-none');
             document.getElementById(this.uxIds[2])?.classList.remove('d-none');
-            console.info('send post complete');
             setTimeout(() => {
               ngForm.resetForm();
               this.formSubmitted = false;
@@ -76,7 +75,6 @@ export class ContactformComponent {
 
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.checkboxChecked && this.mailTest) {
-      console.log("Test Mail success");
       setTimeout(() => {
         ngForm.resetForm();
         this.formSubmitted = false;
@@ -86,6 +84,10 @@ export class ContactformComponent {
 
   onInputFocus(i: number) {
     this.inputFocused[i] = true;
+  }
+
+  onInputChange(i: number) {
+    this.inputChanged[i] = true;
   }
 
   onInputBlur(i: number) {
