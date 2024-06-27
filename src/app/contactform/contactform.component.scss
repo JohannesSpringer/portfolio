@@ -45,6 +45,7 @@
 
         span {
             color: var(--error);
+            opacity: 0;
         }
 
         input,
@@ -248,6 +249,10 @@ h1 {
 
 .d-none {
     display: none;
+}
+
+.transparent {
+    opacity: 1 !important;
 }
 
 @media (min-width: 768px) {

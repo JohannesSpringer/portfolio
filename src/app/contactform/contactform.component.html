@@ -13,7 +13,7 @@
                 placeholder="{{ 'inputName' | translate }}" required>
             <img *ngIf="!name.valid && inputChanged[0] || !name.valid && formSubmitted" src="./../../assets/img/error.png" srcset="">
             <img *ngIf="name.valid && inputChanged[0] || name.valid && formSubmitted" src="./../../assets/img/success.png" srcset="">
-            <span *ngIf="!name.valid && inputChanged[0] || !name.valid && formSubmitted">{{ 'inputNameReq' | translate }}</span>
+            <span [class.transparent]="!name.valid && inputChanged[0] || !name.valid && formSubmitted">{{ 'inputNameReq' | translate }}</span>
         </div>
 
         <div class="input-container">
@@ -24,7 +24,7 @@
                 pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
             <img *ngIf="!email.valid && inputChanged[1] || !email.valid && formSubmitted" src="./../../assets/img/error.png" srcset="">
             <img *ngIf="email.valid && inputChanged[1] || email.valid && formSubmitted" src="./../../assets/img/success.png" srcset="">
-            <span *ngIf="!email.valid && inputChanged[1] || !email.valid && formSubmitted">{{ 'inputMailReq' | translate }}</span>
+            <span [class.transparent]="!email.valid && inputChanged[1] || !email.valid && formSubmitted">{{ 'inputMailReq' | translate }}</span>
         </div>
 
         <div class="input-container">
@@ -34,7 +34,7 @@
                 placeholder="{{ 'inputMsg' | translate }}" required></textarea>
             <img *ngIf="!message.valid && inputChanged[2] || !message.valid && formSubmitted" src="./../../assets/img/error.png" srcset="">
             <img *ngIf="message.valid && inputChanged[2] || message.valid && formSubmitted" src="./../../assets/img/success.png" srcset="">
-            <span *ngIf="!message.valid && inputChanged[2] || !message.valid && formSubmitted">{{ 'inputMsgReq' | translate }}</span>
+            <span [class.transparent]="!message.valid && inputChanged[2] || !message.valid && formSubmitted">{{ 'inputMsgReq' | translate }}</span>
         </div>
 
         <div class="checkbox-container">

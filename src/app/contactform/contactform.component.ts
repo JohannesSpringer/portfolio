@@ -67,9 +67,11 @@ export class ContactformComponent {
             document.getElementById(this.uxIds[2])?.classList.remove('d-none');
             setTimeout(() => {
               ngForm.resetForm();
+              for (let i = 0; i < this.inputChanged.length; i++) {
+                this.inputChanged[i] = false;
+              }
               this.formSubmitted = false;
               document.getElementById(this.uxIds[2])?.classList.add('d-none');
-
             }, 2000);
           },
 

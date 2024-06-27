@@ -42,6 +42,7 @@
 }
 .contactform .input-container span {
   color: var(--error);
+  opacity: 0;
 }
 .contactform .input-container input,
 .contactform .input-container textarea {
@@ -222,6 +223,10 @@ h1 {
 
 .d-none {
   display: none;
+}
+
+.transparent {
+  opacity: 1 !important;
 }
 
 @media (min-width: 768px) {
