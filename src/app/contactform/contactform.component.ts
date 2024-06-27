@@ -3,6 +3,7 @@ import { Component, HostListener, inject } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { LanguageService } from '../language.service';
 import { style } from '@angular/animations';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'app-contactform',
@@ -14,6 +15,7 @@ export class ContactformComponent {
 
   languageService = inject(LanguageService);
   http = inject(HttpClient);
+  sharedService = inject(SharedService);
 
   contactData = {
     name: "",

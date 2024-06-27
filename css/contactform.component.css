@@ -229,6 +229,10 @@ h1 {
   opacity: 1 !important;
 }
 
+.arrow-up {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .contactform {
     padding: 0;
@@ -241,10 +245,34 @@ h1 {
   input[type=submit] {
     width: 277px !important;
   }
+  .arrow-up {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 16px;
+    bottom: 0;
+    cursor: pointer;
+  }
+  .arrow-up img:first-child {
+    transform: translateY(15px) translateX(0px);
+  }
+  .arrow-up img:last-child {
+    width: 5px;
+    height: 50px;
+    transition: height ease-in-out 200ms;
+  }
+  .arrow-up:hover img:last-child {
+    height: 80px;
+    transition: height ease-in-out 200ms;
+  }
 }
 @media (min-width: 1280px) {
   h1 {
     width: 1240px !important;
     padding: 0 !important;
+  }
+  .arrow-up {
+    right: calc(50% - 624px);
   }
 }/*# sourceMappingURL=contactform.component.css.map */

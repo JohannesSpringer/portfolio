@@ -34,7 +34,7 @@ export class SharedService {
     const element = document.getElementById(elementId);
     if (element) {
       const topOffset = element.offsetTop - offset;
-      window.scrollTo({ top: topOffset, behavior: 'auto'});
+      window.scrollTo({ top: topOffset, behavior: 'smooth'});
     }
   }
 }
