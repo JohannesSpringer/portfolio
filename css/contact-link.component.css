@@ -22,6 +22,7 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  height: inherit;
 }
 .contact-link-content .contact-link-mail {
   writing-mode: vertical-rl;
@@ -37,6 +38,7 @@
   justify-content: flex-end;
   width: 60px;
   margin-bottom: 16px;
+  height: -webkit-fill-available;
 }
 .contact-scroll .contact-scroll-img {
   height: calc(100% - 72px);
