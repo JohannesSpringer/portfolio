@@ -114,12 +114,12 @@
 }
 
 .show-arrow {
-  transform: rotate(0);
+  transform: rotate(-180deg);
   transition: linear 200ms;
 }
 
 .hide-arrow {
-  transform: rotate(135deg);
+  transform: rotate(-45deg);
   transition: linear 200ms;
 }
 
@@ -148,16 +148,13 @@
 .portfolio:nth-of-type(odd) .portfolio-img .portfolio-img-border .border-arrow {
   left: -24px;
 }
-.portfolio:nth-of-type(odd) .border-arrow {
-  transform: rotate(135deg);
+.portfolio:nth-of-type(odd) .show-arrow {
+  transform: rotate(90deg);
+  transition: linear 200ms;
 }
 .portfolio:nth-of-type(odd) .show-border {
   transform: translate(-10px, 10px);
   opacity: 1;
-  transition: linear 200ms;
-}
-.portfolio:nth-of-type(odd) .show-arrow {
-  transform: rotate(270deg);
   transition: linear 200ms;
 }
 .portfolio:nth-of-type(odd) .portfolio-info {
@@ -183,6 +180,14 @@
   .portfolios {
     max-width: var(--max-width);
     width: 100%;
+  }
+  .show-arrow {
+    transform: rotate(0);
+    transition: linear 200ms;
+  }
+  .hide-arrow {
+    transform: rotate(135deg);
+    transition: linear 200ms;
   }
   .portfolio-intro {
     max-width: 532px;
@@ -214,5 +219,9 @@
   }
   .portfolio:nth-of-type(odd) .portfolio-content {
     flex-direction: row-reverse !important;
+  }
+  .portfolio:nth-of-type(odd) .show-arrow {
+    transform: rotate(270deg);
+    transition: linear 200ms;
   }
 }/*# sourceMappingURL=portfolio.component.css.map */

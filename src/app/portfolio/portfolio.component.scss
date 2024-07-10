@@ -129,12 +129,12 @@
 }
 
 .show-arrow {
-  transform: rotate(0);
+  transform: rotate(-180deg);
   transition: linear 200ms;
 }
 
 .hide-arrow {
-  transform: rotate(135deg);
+  transform: rotate(-45deg);
   transition: linear 200ms;
 }
 
@@ -169,18 +169,14 @@
     }
   }
 
-  .border-arrow {
-    transform: rotate(135deg);
+  .show-arrow {
+    transform: rotate(90deg);
+    transition: linear 200ms;
   }
 
   .show-border {
     transform: translate(-10px, 10px);
     opacity: 1;
-    transition: linear 200ms;
-  }
-
-  .show-arrow {
-    transform: rotate(270deg);
     transition: linear 200ms;
   }
 
@@ -211,6 +207,16 @@
   .portfolios {
     max-width: var(--max-width);
     width: 100%;
+  }
+
+  .show-arrow {
+    transform: rotate(0);
+    transition: linear 200ms;
+  }
+  
+  .hide-arrow {
+    transform: rotate(135deg);
+    transition: linear 200ms;
   }
 
   .portfolio-intro {
@@ -250,6 +256,11 @@
   .portfolio:nth-of-type(odd) {
     .portfolio-content {
       flex-direction: row-reverse !important;
+    }
+
+    .show-arrow {
+      transform: rotate(270deg);
+      transition: linear 200ms;
     }
   }
 }
