@@ -20,7 +20,7 @@
             <input #email="ngModel" [ngClass]="{'thin-border' : formSubmitted}" [(ngModel)]="contactData.email"
                 type="email" id="email" name="email" placeholder="{{ 'inputMail' | translate }}"
                 (focus)="onInputFocus(1)" (blur)="onInputBlur(1)" (keyup)="onInputChange(1)" required
-                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+                pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
             <img *ngIf="!email.valid && inputChanged[1] || !email.valid && formSubmitted" src="./../../assets/img/error.png" srcset="">
             <img *ngIf="email.valid && inputChanged[1] || email.valid && formSubmitted" src="./../../assets/img/success.png" srcset="">
             <span [class.transparent]="!email.valid && inputChanged[1] || !email.valid && formSubmitted">{{ 'inputMailReq' | translate }}</span>
