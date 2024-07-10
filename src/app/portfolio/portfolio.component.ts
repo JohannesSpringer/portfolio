@@ -47,9 +47,7 @@ export class PortfolioComponent {
 
   checkDevice() {
     this.deviceInfo = this.deviceService.getDeviceInfo();
-    this.isMobile = this.deviceService.isMobile();
-    // const isTablet = this.deviceService.isTablet();
-    // const isDesktopDevice = this.deviceService.isDesktop();    
+    this.isMobile = this.deviceService.isMobile();   
   }
 
   /**
@@ -58,7 +56,7 @@ export class PortfolioComponent {
    */
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(event: Event) {    
-    if (this.isMobile) this.checkElementPosition();
+    this.checkElementPosition();
   }
 
   /**
@@ -67,7 +65,6 @@ export class PortfolioComponent {
   checkElementPosition() {
     for (let i = 0; i < this.projects.length; i++) {
       const prj = this.projects[i];
-      if (prj.hovered) continue;
       const element = document.getElementById('portfolio' + i);      
       if (element) {
         prj.hovered = this.elementIsVisible(element);
@@ -76,13 +73,7 @@ export class PortfolioComponent {
   }
 
   elementIsVisible(ele: HTMLElement) {
-    const rect = ele.getBoundingClientRect();
-    return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
+    return this.sharedService.elementIsVisible(ele);
   }
 
   openLink(link: string) {

@@ -48,12 +48,13 @@
       height: 174px;
       -webkit-filter: grayscale(100%);
       filter: grayscale(100%);
+      transition: ease-out 200ms;
     }
 
     .project-img-hovered {
       -webkit-filter: unset;
       filter: unset;
-      animation: change-img-filter 0.2s linear;
+      transition: ease-out 200ms;
     }
 
     .portfolio-img-border {
@@ -61,10 +62,9 @@
       height: 166px;
       border: 4px solid black;
       position: absolute;
-      top: 20px;
-      left: 10px;
+      top: 10px;
+      left: 0px;
       cursor: pointer;
-      animation: show-portfolio-img-border 0.2s linear;
 
       .border-arrow {
         width: 40px;
@@ -72,7 +72,6 @@
         position: absolute;
         right: -24px;
         top: calc(50% - 20px);
-        animation: rotate-arrow-135deg 0.2s linear;
       }
     }
   }
@@ -82,7 +81,6 @@
     flex-direction: column;
     font-family: "Overpass", "sans-serif";
     font-weight: 400;
-    animation: show-portfolio-info 0.2s linear;
 
     .portfolio-techstack {
       font-size: 23px;
@@ -118,6 +116,40 @@
   display: none;
 }
 
+.show-border {
+  transform: translate(10px, 10px);
+  opacity: 1;
+  transition: linear 200ms;
+}
+
+.hide-border {
+  transform: translate(0px, 0px);
+  opacity: 0;
+  transition: linear 200ms;
+}
+
+.show-arrow {
+  transform: rotate(0);
+  transition: linear 200ms;
+}
+
+.hide-arrow {
+  transform: rotate(135deg);
+  transition: linear 200ms;
+}
+
+.show-info {
+  opacity: 1;
+  transform: scaleY(1);
+  transition: linear 200ms;
+}
+
+.hide-info {
+  opacity: 0;
+  transform: scaleY(0);
+  transition: linear 200ms;
+}
+
 // invert every second element
 .portfolio:nth-of-type(odd) {
   .portfolio-counter {
@@ -129,13 +161,27 @@
 
     .portfolio-img-border {
       left: unset;
-      right: 10px;
-      animation: show-portfolio-img-border-inverted 0.2s linear;
+      right: 0px;
 
       .border-arrow {
         left: -24px;
       }
     }
+  }
+
+  .border-arrow {
+    transform: rotate(135deg);
+  }
+
+  .show-border {
+    transform: translate(-10px, 10px);
+    opacity: 1;
+    transition: linear 200ms;
+  }
+
+  .show-arrow {
+    transform: rotate(270deg);
+    transition: linear 200ms;
   }
 
   .portfolio-info {
@@ -144,8 +190,6 @@
     h2 {
       text-align: right;
     }
-
-    
 
     p {
       text-align: right;
@@ -161,53 +205,6 @@
   display: flex;
   gap: 8px;
   width: fit-content;
-}
-
-@keyframes show-portfolio-img-border {
-  0% {
-    transform: translate(-10px, -10px);
-  }
-}
-
-@keyframes show-portfolio-img-border-inverted {
-  0% {
-    transform: translate(10px, -10px);
-  }
-}
-
-@keyframes rotate-arrow-135deg {
-  0% {
-    transform: rotate(135deg);
-  }
-}
-
-@keyframes rotate-arrow-135deg {
-  0% {
-    transform: rotate(135deg);
-  }
-}
-
-@keyframes show-portfolio-info {
-  0% {
-    opacity: 0;
-    transform: translateY(-230px);
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes change-img-filter {
-  0% {
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-  }
-
-  100% {
-    -webkit-filter: unset;
-    filter: unset;
-  }
 }
 
 @media (min-width: 768px) {
@@ -247,7 +244,7 @@
     width: calc(45vw - 8px) !important;
     max-width: calc(var(--half-max-width) - 8px);
     height: calc(100% - 16px) !important;
-    top: 10px !important;
+    top: 0px !important;
   }
 
   .portfolio:nth-of-type(odd) {

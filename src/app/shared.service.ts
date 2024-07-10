@@ -26,6 +26,14 @@ export class SharedService {
   constructor() { 
   }
 
+  elementIsVisible(ele: HTMLElement) {
+    const rect = ele.getBoundingClientRect();    
+    return (
+      rect.top >= 0 - 100 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) + 100
+    );
+  }
+
   openLink(link: string) {
     window.open(link, '_blank');
   }
