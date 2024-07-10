@@ -12,10 +12,13 @@ export class LandingPageComponent implements AfterViewInit {
   constructor(private renderer: Renderer2) { }
 
   ngAfterViewInit() {
-    this.headline = document.getElementById("headline");
-    this.contactLink = document.getElementById("contactLink");
-    this.adjustContentHeight();
-    window.addEventListener('resize', this.adjustContentHeight.bind(this));
+    setTimeout(() => {
+      this.headline = document.getElementById("headline");
+      this.contactLink = document.getElementById("contactLink");
+      this.adjustContentHeight();
+      window.addEventListener('resize', this.adjustContentHeight.bind(this));
+    }, 200)
+
   }
 
   adjustContentHeight() {
