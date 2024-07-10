@@ -32,6 +32,11 @@
   text-align: right;
 }
 
+app-contact-link {
+  max-width: var(--max-width);
+  width: 90vw;
+}
+
 @media (max-width: 390px) {
   h1 {
     font-size: 40px;

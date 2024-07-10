@@ -25,7 +25,7 @@ export class LandingPageComponent implements AfterViewInit {
     if (this.headline && this.contactLink) {
       const headlineHeight = this.headline.offsetHeight;
       const contactLinkHeight = window.innerHeight - headlineHeight;
-      this.renderer.setStyle(this.contactLink, 'height', `calc(${contactLinkHeight}px - 218px)`);
+      this.renderer.setStyle(this.contactLink, 'height', `calc(${contactLinkHeight}px - 116px)`);
     }
   }
 }

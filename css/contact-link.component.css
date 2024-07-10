@@ -1,5 +1,4 @@
 .contact-link {
-  padding: 25px;
   font-family: "Overpass", "sans-serif";
   font-size: 23px;
   line-height: 23px;
@@ -8,14 +7,16 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  position: relative;
 }
 
 .msg-link {
   margin-top: 60px;
-  padding: 20px 40px;
+  padding: 12px 24px;
   border: 4px solid black;
   cursor: pointer;
   font-weight: 400;
+  position: absolute;
 }
 
 .contact-link-content {
@@ -27,7 +28,6 @@
 .contact-link-content .contact-link-mail {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  margin-top: 16px;
 }
 
 .contact-scroll {
@@ -37,7 +37,6 @@
   gap: 10px;
   justify-content: flex-end;
   width: 60px;
-  margin-bottom: 16px;
   height: -webkit-fill-available;
 }
 .contact-scroll .contact-scroll-img {
