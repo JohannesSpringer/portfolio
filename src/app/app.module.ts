@@ -16,13 +16,12 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ContactformComponent } from './contactform/contactform.component';
 import { HttpBackend, provideHttpClient } from '@angular/common/http';
-import { provideRouter } from '@angular/router';
-import { routes } from './app-routing.module';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { FooterComponent } from './footer/footer.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { LegalNoticeContentComponent } from './legal-notice-content/legal-notice-content.component';
 
 export function translateHttpLoaderFactory(httpBackend: HttpBackend): TranslateHttpLoader {
   return new TranslateHttpLoader(new HttpClient(httpBackend), './assets/i18n/', '.json');
@@ -32,6 +31,7 @@ export function translateHttpLoaderFactory(httpBackend: HttpBackend): TranslateH
   declarations: [
     AppComponent,
     LegalNoticeComponent,
+    LegalNoticeContentComponent,
     HeaderComponent,
     HeadlineComponent,
     ContactLinkComponent,

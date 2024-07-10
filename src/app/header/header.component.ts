@@ -2,6 +2,7 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 import { Component, inject } from '@angular/core';
 import { SharedService } from '../shared.service';
 import { LanguageService } from '../language.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -255,10 +256,12 @@ export class HeaderComponent {
     ['Portfolio', 'Portfolio', 'portfolio', 'normal', '92']
   ];
   appLinks: any[];
+  isLegalNotice: boolean = false;
   languageService = inject(LanguageService);
 
-  constructor(private sharedService: SharedService) {
+  constructor(private sharedService: SharedService, private router: Router) {
     this.appLinks = sharedService.appLinks;   
+    this.isLegalNotice = this.router.isActive('/legal-notice', true);
   }
 
   switchLanguage(language: string) {
@@ -291,7 +294,12 @@ export class HeaderComponent {
   }
 
   scrollToElement(elementId: string, offset: number) {
-    this.sharedService.scrollToElement(elementId, offset);
+    if (this.isLegalNotice) {
+      this.router.navigate(['']);
+      setTimeout(() => {
+        this.sharedService.scrollToElement(elementId, offset);
+      }, 100);
+    } else this.sharedService.scrollToElement(elementId, offset);
   }
 
   convertStringToNumber(str: string) {

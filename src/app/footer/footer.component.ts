@@ -35,9 +35,11 @@ export class FooterComponent {
   appLinks: any[];
   isClicked: boolean = false;
   isHovered: boolean = false;
+  isLegalNotice: boolean = false;
 
   constructor(private sharedService: SharedService, private router: Router) {
     this.appLinks = sharedService.appLinks;
+    this.isLegalNotice = this.router.isActive('/legal-notice', true);
   }
 
   openLink(link: string) {
@@ -53,7 +55,12 @@ export class FooterComponent {
   }
 
   scrollToElement(elementId: string, offset: number) {
-    this.sharedService.scrollToElement(elementId, offset);
+    if (this.isLegalNotice) {
+      this.router.navigate(['']);
+      setTimeout(() => {
+        this.sharedService.scrollToElement(elementId, offset);
+      }, 100);
+    } else this.sharedService.scrollToElement(elementId, offset);
   }
 
   setHover() {

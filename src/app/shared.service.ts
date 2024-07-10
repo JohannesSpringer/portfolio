@@ -23,8 +23,8 @@ export class SharedService {
     },
   ];
 
-  constructor() { 
-  }
+
+  constructor() {}
 
   elementIsVisible(ele: HTMLElement) {
     const rect = ele.getBoundingClientRect();    
