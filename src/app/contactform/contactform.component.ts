@@ -50,6 +50,7 @@ export class ContactformComponent {
     this.checkboxChecked = ngForm.controls['checkboxPrivacyPolicy'].value;
     this.formSubmitted = true;
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest && this.checkboxChecked) {
+      document.getElementById(this.uxIds[0])?.classList.remove('d-none');
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {

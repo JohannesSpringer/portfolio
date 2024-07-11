@@ -133,6 +133,7 @@
 :root {
   --background-clr: #FFFCF3;
   --text-clr-green: #00BC8F;
+  --wait: #e9ab27;
   --error: #E61C40;
   --max-width: 1240px;
   --half-max-width: 620px;
@@ -408,7 +409,7 @@ h1 {
 }
 
 #uxWait {
-  background-color: var(--background-clr);
+  background-color: var(--wait);
   cursor: wait;
 }
 
