@@ -22,6 +22,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { FooterComponent } from './footer/footer.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LegalNoticeContentComponent } from './legal-notice-content/legal-notice-content.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { PrivacyPolicyContentComponent } from './privacy-policy-content/privacy-policy-content.component';
 
 export function translateHttpLoaderFactory(httpBackend: HttpBackend): TranslateHttpLoader {
   return new TranslateHttpLoader(new HttpClient(httpBackend), './assets/i18n/', '.json');
@@ -41,7 +43,9 @@ export function translateHttpLoaderFactory(httpBackend: HttpBackend): TranslateH
     PortfolioComponent,
     ContactformComponent,
     FooterComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    PrivacyPolicyComponent,
+    PrivacyPolicyContentComponent
   ],
   imports: [
     BrowserModule,

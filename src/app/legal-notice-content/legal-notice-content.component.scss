@@ -1,12 +1,13 @@
-@import 'src/styles';
+@import '../../styles';
 
 .legal-notice {
-    margin-top: 48px;
+    margin-top: 56px;
     padding: 24px;
     overflow-x: hidden;
     width: calc(100vw - 48px);
     max-width: 1200px;
     font-family: 'Overpass';
+    min-height: calc(100vh - 339px);
 }
 
 h1 {
@@ -21,24 +22,7 @@ h2 {
     font-family: 'Overpass';
 }
 
-h3 {
-    font-size: 32px;
-    line-height: 32px;
-    font-family: 'Overpass';
-}
-
-h4 {
-    font-size: 24px;
-    line-height: 24px;
-    font-family: 'Overpass';
-}
-
 p {
-    font-size: 16px;
-    line-height: 16px;
-}
-
-ul {
     font-size: 16px;
     line-height: 16px;
 }
@@ -46,51 +30,6 @@ ul {
 .body-component {
     display: flex;
     justify-content: center;
-}
-
-.header {
-    position: fixed;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    width: calc(100% - 50px);
-    max-width: 1200px;
-    padding: 30px 25px 30px 25px;
-    background-color: var(--background-clr);
-    z-index: 10;
-}
-
-.page-back {
-    width: 32px;
-    height: 32px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    img {
-        width: 32px;
-        scale: -1;
-
-        &:hover {
-            filter: invert(76%) sepia(50%) saturate(6708%) hue-rotate(127deg) brightness(92%) contrast(101%);
-        }
-    }
-}
-
-.languages {
-    display: flex;
-    gap: 8px;
-
-    img {
-        height: 32px;
-    }
-}
-
-.flag {
-    height: 32px;
-    cursor: pointer;
-    @include buttonHover();
 }
 
 @media (max-width: 768px) {
@@ -104,24 +43,12 @@ ul {
         line-height: 24px;
     }
 
-    h3 {
-        font-size: 20px;
-        line-height: 20px;
-    }
-
     p {
         font-size: 16px;
         line-height: 16px;
     }
 
-    ul {
-        font-size: 16px;
-        line-height: 16px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .page-back {
-        right: calc(32px + (50vw - 600px));
+    .legal-notice {
+        min-height: calc(100vh - 339px - 70px);
     }
 }

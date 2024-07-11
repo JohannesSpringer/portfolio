@@ -17,6 +17,7 @@
   "inputMsg": "Your message",
   "inputMsgReq": "Your message must contain at least 4 characters.",
   "legalNotice": "Legal notice",
+  "privacyPolicy": "Privacy policy",
   "privacePolicyCheck01": "I've read the",
   "privacePolicyCheck02": "privacy policy",
   "privacePolicyCheck03": "and agree to the processing of my data as outlined.",

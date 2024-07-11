@@ -36,10 +36,12 @@ export class FooterComponent {
   isClicked: boolean = false;
   isHovered: boolean = false;
   isLegalNotice: boolean = false;
+  isPrivacyPolicy: boolean = false;
 
   constructor(private sharedService: SharedService, private router: Router) {
     this.appLinks = sharedService.appLinks;
     this.isLegalNotice = this.router.isActive('/legal-notice', true);
+    this.isPrivacyPolicy = this.router.isActive('/privacy-policy', true);
   }
 
   openLink(link: string) {
@@ -55,7 +57,7 @@ export class FooterComponent {
   }
 
   scrollToElement(elementId: string, offset: number) {
-    if (this.isLegalNotice) {
+    if (this.isLegalNotice || this.isPrivacyPolicy) {
       this.router.navigate(['']);
       setTimeout(() => {
         this.sharedService.scrollToElement(elementId, offset);
@@ -71,8 +73,8 @@ export class FooterComponent {
     this.isHovered = false;
   }
 
-  navigateToLegalNotice() {
-    this.router.navigate(['/legal-notice']);
+  navigateTo(pageLink: string) {
+    this.router.navigate([pageLink]);
     window.scrollTo(0, 0);
   }
 }

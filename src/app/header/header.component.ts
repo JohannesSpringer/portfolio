@@ -257,11 +257,13 @@ export class HeaderComponent {
   ];
   appLinks: any[];
   isLegalNotice: boolean = false;
+  isPrivacyPolicy: boolean = false;
   languageService = inject(LanguageService);
 
   constructor(private sharedService: SharedService, private router: Router) {
     this.appLinks = sharedService.appLinks;   
     this.isLegalNotice = this.router.isActive('/legal-notice', true);
+    this.isPrivacyPolicy = this.router.isActive('/privacy-policy', true);
   }
 
   switchLanguage(language: string) {
@@ -294,7 +296,7 @@ export class HeaderComponent {
   }
 
   scrollToElement(elementId: string, offset: number) {
-    if (this.isLegalNotice) {
+    if (this.isLegalNotice || this.isPrivacyPolicy) {
       this.router.navigate(['']);
       setTimeout(() => {
         this.sharedService.scrollToElement(elementId, offset);

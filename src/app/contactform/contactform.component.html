@@ -43,7 +43,7 @@
             <label for="checkboxPrivacyPolicy">
                 <span>
                     {{ 'privacePolicyCheck01' | translate }}
-                    <button
+                    <button type="button" (click)="navigateToPrivacyPolicy()"
                         [ngClass]="{ 'langen' : languageService.currentLanguage == 'en', 'langde' : languageService.currentLanguage == 'de' }">{{
                         'privacePolicyCheck02' | translate }}</button>
                     {{ 'privacePolicyCheck03' | translate }}

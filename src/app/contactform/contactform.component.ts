@@ -1,9 +1,9 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, HostListener, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { LanguageService } from '../language.service';
-import { style } from '@angular/animations';
 import { SharedService } from '../shared.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contactform',
@@ -44,7 +44,7 @@ export class ContactformComponent {
     },
   };
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   sendMail(ngForm: NgForm) {
     this.checkboxChecked = ngForm.controls['checkboxPrivacyPolicy'].value;
@@ -104,5 +104,10 @@ export class ContactformComponent {
 
   onResize(event: any) {
     this.languageService.onResize(event);
+  }
+
+  navigateToPrivacyPolicy() {
+    this.router.navigate(['/privacy-policy']);
+    window.scrollTo(0, 0);
   }
 }
