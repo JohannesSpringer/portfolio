@@ -1,3 +1,5 @@
+@import 'src/styles';
+
 .footer {
     background-color: black;
     display: flex;
@@ -32,10 +34,7 @@
             border-left: 4px solid black;
         }
 
-        &:hover {
-            transform: scale(1.1);
-            transition: ease-in-out 125ms;
-        }
+        @include buttonHover();
     }
 
     .copyright {

@@ -1,3 +1,5 @@
+@import 'src/styles';
+
 .legal-notice {
     margin-top: 48px;
     padding: 24px;
@@ -88,11 +90,7 @@ ul {
 .flag {
     height: 32px;
     cursor: pointer;
-    transition: all 100ms ease-in-out;
-
-    &:hover {
-        transform: scale(1.1);
-    }
+    @include buttonHover();
 }
 
 @media (max-width: 768px) {
