@@ -37,11 +37,13 @@ export class FooterComponent {
   isHovered: boolean = false;
   isLegalNotice: boolean = false;
   isPrivacyPolicy: boolean = false;
+  isRoot: boolean = false;
 
   constructor(private sharedService: SharedService, private router: Router) {
     this.appLinks = sharedService.appLinks;
     this.isLegalNotice = this.router.isActive('/legal-notice', true);
     this.isPrivacyPolicy = this.router.isActive('/privacy-policy', true);
+    this.isRoot = this.router.isActive('/', true);
   }
 
   openLink(link: string) {

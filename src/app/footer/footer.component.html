@@ -20,7 +20,7 @@
         <div>{{ 'legalNotice' | translate }}</div>
         <div class="underline" [@hoverAnimation]="isHovered ? 'highlighted' : 'normal'"></div>
     </div>
-    <div *ngIf="!isPrivacyPolicy" class="legal-notice" (mouseover)="setHover()" (mouseleave)="resetHover()" (touchstart)="setHover()" (touchend)="resetHover()" (click)="navigateTo('/privacy-policy')">
+    <div *ngIf="!isPrivacyPolicy && !isRoot" class="legal-notice" (mouseover)="setHover()" (mouseleave)="resetHover()" (touchstart)="setHover()" (touchend)="resetHover()" (click)="navigateTo('/privacy-policy')">
         <div>{{ 'privacyPolicy' | translate }}</div>
         <div class="underline" [@hoverAnimation]="isHovered ? 'highlighted' : 'normal'"></div>
     </div>
