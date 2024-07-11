@@ -459,7 +459,7 @@ h1 {
     cursor: pointer;
   }
   .arrow-up img:first-child {
-    transform: translateY(15px) translateX(0px);
+    transform: translateY(15px) translateX(0.75px);
   }
   .arrow-up img:last-child {
     width: 5px;
