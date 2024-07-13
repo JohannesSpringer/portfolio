@@ -14,7 +14,7 @@ export class SharedService {
     {
       "name": "Mail",
       "image": "./../../assets/img/mail-logo.png",
-      "link": "mailto:johannes.springer93@gmx.de"
+      "link": "mailto:mail@johannes-springer.de"
     },
     {
       "name": "LinkedIn",
