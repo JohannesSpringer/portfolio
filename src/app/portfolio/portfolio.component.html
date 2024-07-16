@@ -8,8 +8,7 @@
             {{ ("00" + (i+1)).slice(-2) }}/{{ ("00" + (projects.length)).slice(-2) }}
         </div>
 
-        <div class="portfolio-content" (mouseenter)="prj.hovered=true" (mouseleave)="prj.hovered=false"
-            (touchstart)="prj.hovered=true" (touchend)="prj.hovered=false">
+        <div class="portfolio-content" (mouseenter)="prj.hovered=true" (mouseleave)="prj.hovered=false">
             <div class="portfolio-img" (click)="openLink(prj.prjLink)">
                 <img class="project-img" src="{{ prj.img }}" alt=""
                     [ngClass]="prj.hovered ? 'project-img-hovered' : ''">
